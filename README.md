@@ -24,7 +24,7 @@ Your PRs are welcome! Thank you 😘
 
 <!-- Repository links -->
 
-[gowebly_url]: https://github.com/gowebly/gowebly
+[repo_url]: https://github.com/gowebly/docs
 [repo_pull_request_url]: https://github.com/gowebly/docs/pulls
 [repo_license_url]: https://github.com/gowebly/docs/blob/main/LICENSE
 [repo_cc_license_url]: https://creativecommons.org/licenses/by-sa/4.0/
@@ -32,3 +32,7 @@ Your PRs are welcome! Thank you 😘
 <!-- Author links -->
 
 [author_url]: https://github.com/koddr
+
+<!-- README links -->
+
+[gowebly_url]: https://github.com/gowebly/gowebly
