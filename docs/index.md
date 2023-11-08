@@ -4,9 +4,9 @@ hide:
     - toc
 ---
 
-# The Gowebly CLI
-
 ![gowebly logo](https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly-logo.svg)
+
+# The Gowebly CLI
 
 [![Go version][go_version_img]][go_dev_url]
 [![Go report][go_report_img]][go_report_url]

@@ -17,9 +17,9 @@ go run github.com/gowebly/gowebly@latest create
 !!! tip "Benefits of the `go run` command"
     With `go run`, you can use all features of the **Gowebly** CLI without installation to your system.
 
-That's it! The web application will be created in the current folder.
+That's it! :fire:
 
-It will use the built-in **net/http** package (as a Go backend) and the built-in **html/template** package (as a template engine for the frontend). The **htmx** and **hyperscript** are already available in your HTML templates.
+A web application has been created in the current folder. It will use the **net/http** package (as a Go backend) and the **html/template** package (as a template engine). The **htmx** and **hyperscript** packages are already available in your HTML templates.
 
 <!-- Links -->
 
