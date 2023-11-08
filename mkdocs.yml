@@ -1,0 +1,122 @@
+site_name: The Gowebly CLI
+site_url: https://gowebly.org/
+repo_url: https://github.com/gowebly/gowebly
+repo_name: gowebly/gowebly
+edit_uri: main/docs/
+
+copyright: >-
+  Copyright &copy; 2023 <a href="https://github.com/koddr" target="_blank">Vic Shóstak</a> and <a href="https://github.com/gowebly/gowebly/graphs/contributors" target="_blank">Contributors</a>.
+  The Gowebly CLI is free and Open Source software licensed under the Apache 2.0 License.
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
+
+  icon:
+    repo: fontawesome/brands/git-alt
+    edit: material/pencil
+    view: material/eye
+
+  features:
+    - content.action.edit
+    - content.code.copy
+    - content.tabs.link
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.prune
+    - navigation.footer
+    - navigation.top
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.share
+
+  font:
+    text: Inter
+    code: Fira Code
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: white
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+  - social
+  - offline
+
+extra:
+  homepage: https://gowebly.org
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gowebly/gowebly
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/gowebly/gowebly
+
+  version:
+    provider: mike
+    default: latest
+
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Русский
+      link: /ru/
+      lang: ru
+
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      use_pygments: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
