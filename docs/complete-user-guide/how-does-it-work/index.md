@@ -16,6 +16,10 @@ To be more efficient, the CLI supports the [Templ][ah_templ_url] templating engi
 
 To create a build for the **frontend** part, the quick and easy [Parcel][parcel_url] bundler version `2` was chosen. This allowed us to reduce the unnecessarily stressful moment of frontend build to the maximum. No more need to understand configurations, the CLI has already prepared it for you.
 
+### JavaScript runtime environment
+
+We keep up with the latest updates to **frontend development tools**, so the CLI supports two JavaScript runtime environments: via the standard [Node.js][nodejs_url] and the new and extremely fast [Bun][bun_url] (which is backwards compatible with Node.js). You can choose whichever you like best for your project in the CLI settings.
+
 ### htmx & hyperscript
 
 The CLI also includes an HTTP client that allows background downloading of [htmx][htmx_url] and [hyperscript][hyperscript_url] JavaScript files from a remote CDN for further use in your project.
@@ -31,6 +35,8 @@ All of this together gives us the confidence to say that you will enjoy working 
 <!-- Links -->
 
 [go_url]: https://go.dev
+[nodejs_url]: https://nodejs.org
+[bun_url]: https://bun.sh
 [htmx_url]: https://htmx.org
 [hyperscript_url]: https://hyperscript.org
 [parcel_url]: https://parceljs.org
