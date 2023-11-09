@@ -31,7 +31,7 @@ Every time you execute the `run` command for a project, the **Gowebly** CLI does
 
 | Step  | Description                                                                                              |           Is async?           |
 | ----- | -------------------------------------------------------------------------------------------------------- | :---------------------------: |
-| **1** | **CLI validates the config and applies all settings to the current project**                             | :material-close:{.icon-close} |
+| **1** | **CLI validates the config and applies it to the current project**                                       | :material-close:{.icon-close} |
 | **2** | **CLI prepares the backend part of your project**                                                        |                               |
 | 2.1   | If `template_engine` is set to `templ`, CLI runs `templ generate` with a `--watch` option                | :material-check:{.icon-check} |
 | **3** | **CLI prepares the frontend part of your project**                                                       |                               |
@@ -41,6 +41,31 @@ Every time you execute the `run` command for a project, the **Gowebly** CLI does
 
 !!! tip "Asynchronous steps"
     The **Gowebly** CLI runs all blocks with asynchronous steps in individual **goroutines**. Therefore, preparing to run your project is several times faster than if you start each step one after another.
+
+#### Diagram
+
+For visualization of the **Gowebly** CLI workflow, check the diagram:
+
+```mermaid
+stateDiagram-v2
+    Validation: Config validation
+    Backend: Prepare backend part
+    Frontend: Prepare frontend part
+    Downloading: Downloading scripts
+    Goroutines: Individual goroutines
+    Run: Run your project
+    direction LR
+    [*] --> Validation
+    Validation --> Goroutines
+    state Goroutines {
+        direction LR
+        Backend
+        Frontend
+        Downloading
+    }
+    Goroutines --> Run
+    Run --> [*]
+```
 
 <!-- Links -->
 

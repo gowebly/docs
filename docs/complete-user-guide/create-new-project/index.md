@@ -31,7 +31,7 @@ Every time you execute the `create` command for a project, the **Gowebly** CLI d
 
 | Step  | Description                                                                                                                               |           Is async?           |
 | ----- | ----------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------: |
-| **1** | **CLI validates the config and applies all settings to the current project**                                                              | :material-close:{.icon-close} |
+| **1** | **CLI validates the config and applies it to the current project**                                                                        | :material-close:{.icon-close} |
 | **2** | **CLI generates the structure of your project (folders and files)**                                                                       | :material-close:{.icon-close} |
 | **3** | **CLI prepares the backend part of your project**                                                                                         |                               |
 | 3.1   | CLI generates the needed utility files (`go.mod`, backend files, and so on)                                                               | :material-check:{.icon-check} |
@@ -45,6 +45,31 @@ Every time you execute the `create` command for a project, the **Gowebly** CLI d
 
 !!! tip "Asynchronous steps"
     The **Gowebly** CLI runs all blocks with asynchronous steps in individual **goroutines**. Therefore, creating a new project is several times faster than if you start each step one after another.
+
+#### Diagram
+
+For visualization of the **Gowebly** CLI workflow, check the diagram:
+
+```mermaid
+stateDiagram-v2
+    Validation: Config validation
+    Structure: Generate project structure
+    Backend: Prepare backend part
+    Frontend: Prepare frontend part
+    Downloading: Downloading scripts
+    Goroutines: Individual goroutines
+    direction LR
+    [*] --> Validation
+    Validation --> Structure
+    Structure --> Goroutines
+    state Goroutines {
+        direction LR
+        Backend
+        Frontend
+        Downloading
+    }
+    Goroutines --> [*]
+```
 
 ### Project structure after creating
 

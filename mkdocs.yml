@@ -7,6 +7,21 @@ copyright: >-
   Copyright &copy; 2023 <a href="https://github.com/koddr" target="_blank">Vic Shóstak</a> and <a href="https://github.com/gowebly/gowebly/graphs/contributors" target="_blank">Contributors</a>.
   The Gowebly CLI is free and Open Source software licensed under the Apache 2.0 License.
 
+nav:
+  - About project: index.md
+  - Quick start: quick-start/index.md
+  - Complete user guide:
+      - Introduction: complete-user-guide/index.md
+      - How does it work?: complete-user-guide/how-does-it-work/index.md
+      - Installation: complete-user-guide/installation/index.md
+      - Configuration: complete-user-guide/configuration/index.md
+      - Create new project: complete-user-guide/create-new-project/index.md
+      - Run your project: complete-user-guide/run-your-project/index.md
+      - Build your project: complete-user-guide/build-your-project/index.md
+  - Helpers library: helpers-library/index.md
+  - FAQ: faq/index.md
+  - Troubleshooting: troubleshooting/index.md
+
 theme:
   name: material
   logo: assets/logo.svg
@@ -21,7 +36,6 @@ theme:
     - content.code.copy
     - content.tabs.link
     - content.code.annotate
-    - navigation.tabs
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
@@ -29,7 +43,6 @@ theme:
     - navigation.footer
     - navigation.top
     - toc.follow
-    - toc.integrate
     - search.suggest
     - search.share
 
@@ -94,6 +107,8 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - footnotes
   - tables
   - pymdownx.betterem
@@ -108,7 +123,11 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.keys
   - pymdownx.smartsymbols
   - pymdownx.tabbed:

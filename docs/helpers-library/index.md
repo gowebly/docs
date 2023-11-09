@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---
+
 # Helpers library
 
 The **Gowebly** CLI has a library of user-friendly [helpers][gowebly_helpers_url] for your code.
@@ -11,7 +16,7 @@ go get -u github.com/gowebly/helpers
 ```
 
 !!! tip "Library usage"
-    This library is **already** included in the Go backend that is created by the `create` command, but you can use these helpers in other projects as well.
+    This library is **already** included in the Go backend that is created by the `create` command, but you can use it in other projects as well.
 
 <!-- Links -->
 

@@ -25,9 +25,9 @@ To prepare your project to the production, execute the `build` command:
 
 Possible options:
 
-| Option          | Description                                                                           |         Is required?          |
-| --------------- | ------------------------------------------------------------------------------------- | :---------------------------: |
-| `--skip-docker` | CLI skips a generation process for the Docker files (it's helpful if you've your own) | :material-close:{.icon-close} |
+| Option          | Description                                         |         Is required?          |
+| --------------- | --------------------------------------------------- | :---------------------------: |
+| `--skip-docker` | CLI skips a generation process for the Docker files | :material-close:{.icon-close} |
 
 <img width="720" alt="gowebly build" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_build.png">
 
@@ -37,7 +37,7 @@ Every time you execute the `build` command for a project, the **Gowebly** CLI do
 
 | Step  | Description                                                                                                         |           Is async?           |
 | ----- | ------------------------------------------------------------------------------------------------------------------- | :---------------------------: |
-| **1** | **CLI validates the config and applies all settings to the current project**                                        | :material-close:{.icon-close} |
+| **1** | **CLI validates the config and applies it to the current project**                                                  | :material-close:{.icon-close} |
 | **2** | **CLI prepares the Docker files for your project**                                                                  |                               |
 | 2.1   | If `--skip-docker` option is not set, CLI generates the needed Docker files (`docker-compose.yml` and `Dockerfile`) | :material-check:{.icon-check} |
 | **3** | **CLI prepares the frontend part of your project**                                                                  |                               |
@@ -46,6 +46,29 @@ Every time you execute the `build` command for a project, the **Gowebly** CLI do
 
 !!! tip "Asynchronous steps"
     The **Gowebly** CLI runs all blocks with asynchronous steps in individual **goroutines**. Therefore, building your project is several times faster than if you start each step one after another.
+
+#### Diagram
+
+For visualization of the **Gowebly** CLI workflow, check the diagram:
+
+```mermaid
+stateDiagram-v2
+    Validation: Config validation
+    Docker: Generate Docker files
+    Frontend: Prepare frontend part
+    Downloading: Downloading scripts
+    Goroutines: Individual goroutines
+    direction LR
+    [*] --> Validation
+    Validation --> Goroutines
+    state Goroutines {
+        direction LR
+        Docker
+        Frontend
+        Downloading
+    }
+    Goroutines --> [*]
+```
 
 ### Project structure after building
 

@@ -1,12 +1,11 @@
 ---
 hide:
-    - navigation
     - toc
 ---
 
-![gowebly logo](https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly-logo.svg)
-
 # The Gowebly CLI
+
+![gowebly logo](https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly-logo.svg)
 
 [![Go version][go_version_img]][go_dev_url]
 [![Go report][go_report_img]][go_report_url]
@@ -31,15 +30,6 @@ A next-generation CLI tool for easily build amazing web applications with **Go**
 - Has a library of **user-friendly** helpers for your Go code;
 - Contains a comprehensive **example** of how to use it out of the box.
 
-## Documentation
-
-We always treasure your time and want you to start building really great web products on this awesome technology stack as soon as possible! Therefore, to get a complete guide to use and understand the basic principles of the **Gowebly** CLI, we have prepared a comprehensive explanation of the project in this **Documentation**.
-
-We hope you find answers to all of your questions!
-
-!!! tip "Can't find the answer?"
-    If you can't find the answer to your question here, feel free to create an [issue][repo_issues_url] in the **Gowebly** CLI repository or send a [PR][repo_pull_request_url] to the **Gowebly** Docs repository.
-
 <!-- Links -->
 
 [go_report_url]: https://goreportcard.com/report/github.com/gowebly/gowebly
@@ -50,5 +40,3 @@ We hope you find answers to all of your questions!
 [go_report_img]: https://img.shields.io/badge/Go_report-A+-success?style=for-the-badge&logo=none
 [repo_license_url]: https://github.com/gowebly/gowebly/blob/main/LICENSE
 [repo_license_img]: https://img.shields.io/badge/license-Apache_2.0-red?style=for-the-badge&logo=none
-[repo_pull_request_url]: https://github.com/gowebly/docs/pulls
-[repo_issues_url]: https://github.com/gowebly/gowebly/issues
