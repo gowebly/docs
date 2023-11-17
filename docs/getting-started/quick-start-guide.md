@@ -22,7 +22,7 @@ A web application has been created in the current folder. It will use the **net/
 
 ## Use a ready-made packages for GNU/Linux distros
 
-Download ready-made `deb` (for Debian, Ubuntu), `rpm` (for CentOS, Fedora), `apk` (for Alpine), or Arch Linux packages from the [Releases][repo_releases_url] page.
+Download ready-made `exe` files for Windows, `deb` (for Debian, Ubuntu), `rpm` (for CentOS, Fedora), `apk` (for Alpine), or Arch Linux packages from the [Releases][repo_releases_url] page.
 
 Install it like you normally would.
 
