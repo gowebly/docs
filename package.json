@@ -1,0 +1,20 @@
+{
+  "name": "gowebly-docs",
+  "description": "Documentation for the Gowebly project.",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "bunx vitepress dev docs",
+    "build": "bunx vitepress build docs",
+    "preview": "bunx vitepress preview docs"
+  },
+  "devDependencies": {
+    "mermaid": "^10.6.1",
+    "vitepress": "^1.0.0-rc.26",
+    "vitepress-plugin-mermaid": "^2.0.15",
+    "vue": "^3.3.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

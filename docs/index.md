@@ -1,42 +1,56 @@
 ---
-hide:
-    - toc
+layout: home
+
+hero:
+  name: Gowebly
+  text: A next-generation CLI tool for build amazing web apps.
+  tagline: Go, htmx & hyperscript, modern CSS frameworks!
+  image:
+    src: /gowebly-logo.svg
+    alt: "gowebly logo"
+  actions:
+    - theme: brand
+      text: Getting started
+      link: /getting-started
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/gowebly/gowebly
+
+features:
+  - title: Community first
+    details: 100% free and Open Source project under the Apache 2.0 and Creative Commons (CC BY-SA 4.0 International) licenses.
+    icon:
+      src: /icons/community-first.svg
+  - title: Blazing fast
+    details: Powered by htmx & hyperscript and code generation with parallel processing using the Go programming language.
+    icon:
+      src: /icons/blazing-fast.svg
+  - title: Everyone are welcome
+    details: Well-documented, multi-language support, for any level of developer's knowledge and technical expertise.
+    icon:
+      src: /icons/for-everyone.svg
+  - title: Cross-platform, multi-architecture
+    details: Allows successful running on GNU/Linux, MS Windows (including WSL) and Apple macOS.
+    icon:
+      src: /icons/cross-platform.svg
+  - title: Most popular Go web frameworks
+    details: Supports Go web frameworks out of the box, such as Fiber, Gin, Echo, Chi and HttpRouter.
+    icon:
+      src: /icons/go-frameworks.svg
+  - title: Beautiful CSS frameworks
+    details: Supports atomic/utility-first CSS frameworks out of the box, such as Tailwind and UnoCSS.
+    icon:
+      src: /icons/css-frameworks.svg
+  - title: Modern template engines
+    details: Supports the way web apps are developed using the Templ package with hot-reloading.
+    icon:
+      src: /icons/template-engines.svg
+  - title: Hot-reloading
+    details: Supports hot-reloading mode for your CSS styles using Parcel bundler.
+    icon:
+      src: /icons/hot-reloading.svg
+  - title: PWA-ready
+    details: Apps are ready to install as PWA (Progressive Web App) in your browser or mobile device.
+    icon:
+      src: /icons/pwa-ready.svg
 ---
-
-# The Gowebly CLI
-
-![gowebly logo](https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly-logo.svg)
-
-[![Go version][go_version_img]][go_dev_url]
-[![Go report][go_report_img]][go_report_url]
-[![Code coverage][go_code_coverage_img]][go_code_coverage_url]
-[![License][repo_license_img]][repo_license_url]
-
-A next-generation CLI tool for easily build amazing web applications with **Go** on the backend, using **htmx** & **hyperscript** and the most popular atomic/utility-first **CSS frameworks** on the frontend.
-
-## Features
-
-- 100% **free** and **open source** under the [Apache 2.0][repo_license_url] license;
-- For **any** level of developer's knowledge and technical expertise;
-- **Well-documented**, with a lot of tips and assists from the authors;
-- Cross-platform and multi-architecture allows **successful running** on GNU/Linux, MS Windows (including WSL) and Apple macOS;
-- Smart CLI that **does most** of the routine setup and preparation for production;
-- Helps to get into the **Go** + **htmx** + **hyperscript** technology stack faster;
-- Supports the most popular Go web frameworks out of the box, such as **Fiber**, **Gin**, **Echo**, **Chi** and **HttpRouter**;
-- Supports the way web applications are developed using the **Templ** templating engine with hot-reloading;
-- The possibility of simply adding a ready-to-use and completely customized atomic/utility-first **CSS framework** to your project;
-- Ready to install as **PWA** (Progressive Web App) in your browser or mobile device;
-- Supports **live-reloading mode** for your CSS styles;
-- Has a library of **user-friendly** helpers for your Go code;
-- Contains a comprehensive **example** of how to use it out of the box.
-
-<!-- Links -->
-
-[go_report_url]: https://goreportcard.com/report/github.com/gowebly/gowebly
-[go_dev_url]: https://pkg.go.dev/github.com/gowebly/gowebly
-[go_version_img]: https://img.shields.io/badge/Go-1.21+-00ADD8?style=for-the-badge&logo=go
-[go_code_coverage_url]: https://codecov.io/gh/gowebly/gowebly
-[go_code_coverage_img]: https://img.shields.io/codecov/c/gh/gowebly/gowebly.svg?logo=codecov&style=for-the-badge
-[go_report_img]: https://img.shields.io/badge/Go_report-A+-success?style=for-the-badge&logo=none
-[repo_license_url]: https://github.com/gowebly/gowebly/blob/main/LICENSE
-[repo_license_img]: https://img.shields.io/badge/license-Apache_2.0-red?style=for-the-badge&logo=none

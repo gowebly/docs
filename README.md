@@ -1,13 +1,13 @@
 # Documentation of the Gowebly CLI
 
-The official documentation of the [Gowebly CLI][gowebly_url].
+The official documentation of the [Gowebly][gowebly_url] CLI.
 
 ## ⚡️ Quick start
 
 Start a developer server with the **Gowebly** Docs by running this command:
 
 ```bash
-docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+bun run dev
 ```
 
 ## 🏆 A win-win cooperation
