@@ -20,7 +20,7 @@ Your PRs are welcome! Thank you 😘
 
 ## ⚠️ License
 
-[`The Gowebly Docs`][repo_url] is free and open-source software licensed under the [Apache 2.0 License][repo_license_url], created and supported by [Vic Shóstak][author_url] with 🩵 for people and robots. Official logo distributed under the [Creative Commons License][repo_cc_license_url] (CC BY-SA 4.0 International).
+[`The Gowebly Docs`][repo_url] is free and open-source software licensed under the [Apache 2.0 License][repo_license_url], created and supported by [Vic Shóstak][author_url] and the [True Web Artisans][true_web_artisans_url] team with 🩵 for people and robots. Official logo distributed under the [Creative Commons License][repo_cc_license_url] (CC BY-SA 4.0 International).
 
 <!-- Repository links -->
 
@@ -32,6 +32,7 @@ Your PRs are welcome! Thank you 😘
 <!-- Author links -->
 
 [author_url]: https://github.com/koddr
+[true_web_artisans_url]: https://github.com/truewebartisans
 
 <!-- README links -->
 
