@@ -8,7 +8,7 @@ prev:
 
 使用 Gowebly CLI 时可能出现的最常见故障。
 
-<!--@include: ../parts/block_cant-find-answer.md-->
+<!--@include: ../parts/zh_HK/block_cant-find-answer.md-->
 
 ## Docker: 请求的镜像平台与检测到的主机平台不匹配
 

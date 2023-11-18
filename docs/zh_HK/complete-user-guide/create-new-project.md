@@ -16,7 +16,7 @@ docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest create
 ```
 :::
 
-<!--@include: ../../parts/block_default_config.md -->
+<!--@include: ../../parts/zh_HK/block_default_config.md -->
 
 <img width="720" alt="gowebly create" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_create.png">
 

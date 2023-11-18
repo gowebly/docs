@@ -7,7 +7,7 @@ lastUpdated: false
 
 本节将帮助您了解 Gowebly CLI 的工作原理。
 
-<!--@include: ../../parts/block_want-to-try.md-->
+<!--@include: ../../parts/zh_HK/block_want-to-try.md-->
 
 Gowebly CLI 建立在 [Go][go_url] 编程语言之上。
 

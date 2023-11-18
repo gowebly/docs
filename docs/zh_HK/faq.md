@@ -8,7 +8,7 @@ next:
 
 本节收集了使用 Gowebly CLI 时可能遇到的最常见问题。
 
-<!--@include: ../parts/block_cant-find-answer.md-->
+<!--@include: ../parts/zh_HK/block_cant-find-answer.md-->
 
 ## 提问或报告错误的正确方式是什么？
 

@@ -7,7 +7,7 @@ lastUpdated: false
 
 本节将帮助您了解什么是 Gowebly CLI。
 
-<!--@include: ../parts/block_want-to-try.md-->
+<!--@include: ../parts/zh_HK/block_want-to-try.md-->
 
 Gowebly CLI 是一款免费开源软件，可帮助您在后端使用 Go，在前端使用 htmx 和 hyperscript 以及最流行的原子/实用优先 CSS 框架，轻松构建令人惊叹的网络应用程序。
 

@@ -16,7 +16,7 @@ docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest run
 ```
 :::
 
-<!--@include: ../../parts/block_default_config.md -->
+<!--@include: ../../parts/zh_HK/block_default_config.md -->
 
 <img width="720" alt="gowebly run" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_run.png">
 

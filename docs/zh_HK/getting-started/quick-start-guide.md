@@ -2,7 +2,7 @@
 
 以下是运行 Gowebly CLI 的最基本步骤。
 
-<!--@include: ../../parts/block_cant-find-answer.md-->
+<!--@include: ../../parts/zh_HK/block_cant-find-answer.md-->
 
 首先，[下载][go_download_url] 并安装 Go。需要安装 `1.21`（或更高版本）。
 

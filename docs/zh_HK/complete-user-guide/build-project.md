@@ -22,7 +22,7 @@ docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest build [OPT
 | --------------- | ------------------------------ | :--------: |
 | `--skip-docker` | CLI 跳过生成 Docker 文件的过程 |    没有    |
 
-<!--@include: ../../parts/block_default_config.md -->
+<!--@include: ../../parts/zh_HK/block_default_config.md -->
 
 <img width="720" alt="gowebly build" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_build.png">
 

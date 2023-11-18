@@ -7,7 +7,7 @@ lastUpdated: false
 
 本节包含如何安装、配置和使用 Gowebly CLI 所有功能的详细说明。
 
-<!--@include: ../parts/block_want-to-try.md-->
+<!--@include: ../parts/zh_HK/block_want-to-try.md-->
 
 ## 作者的话
 
@@ -17,7 +17,7 @@ lastUpdated: false
 
 希望你能找到所有问题的答案！
 
-<!--@include: ./parts/block_cant-find-answer.md-->
+<!--@include: ./parts/zh_HK/block_cant-find-answer.md-->
 
 ## 开始探索
 
