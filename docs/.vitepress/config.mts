@@ -25,7 +25,65 @@ const userConfig: UserConfig = {
     zh_HK: {
       label: '简体中文',
       lang: 'zh_HK',
-      link: '/zh_HK/'
+      link: '/zh_HK/',
+      themeConfig: {
+        nav: [
+          { text: '首页', link: '/zh_HK/' },
+          { text: '开始', link: '/zh_HK/getting-started' },
+          { text: '完整的用户指南', link: '/zh_HK/complete-user-guide' },
+          { text: '常见问题', link: '/zh_HK/faq' },
+          { text: '故障排除', link: '/zh_HK/troubleshooting' }
+        ],
+        sidebar: {
+          '/zh_HK/getting-started': [
+            {
+              text: '导言',
+              collapsed: false,
+              items: [
+                { text: '什么是 Gowebly CLI？', link: '/zh_HK/getting-started' },
+                { text: '它是如何工作的？', link: '/zh_HK/getting-started/how-does-it-work' },
+              ]
+            },
+            {
+              text: '立即试用',
+              collapsed: false,
+              items: [
+                { text: '快速入门指南', link: '/zh_HK/getting-started/quick-start-guide' },
+                { text: '帮助者图书馆', link: '/zh_HK/getting-started/helpers-library' }
+              ]
+            },
+            {
+              text: '发展',
+              collapsed: false,
+              items: [
+                { text: '从源头构建', link: '/zh_HK/getting-started/build-from-source' },
+                { text: '发布说明', link: '/zh_HK/getting-started/release-notes' },
+                { text: '我们的团队', link: '/zh_HK/getting-started/our-team' }
+              ]
+            }
+          ],
+          '/zh_HK/complete-user-guide': [
+            {
+              text: '导言',
+              collapsed: false,
+              items: [
+                { text: '在我们开始之前', link: '/zh_HK/complete-user-guide' }
+              ]
+            },
+            {
+              text: '使用方法',
+              collapsed: false,
+              items: [
+                { text: '安装', link: '/zh_HK/complete-user-guide/installation' },
+                { text: '配置', link: '/zh_HK/complete-user-guide/configuration' },
+                { text: '创建新项目', link: '/zh_HK/complete-user-guide/create-new-project' },
+                { text: '运行项目', link: '/zh_HK/complete-user-guide/run-your-project' },
+                { text: '建设项目', link: '/zh_HK/complete-user-guide/build-project' }
+              ]
+            }
+          ]
+        },
+      }
     },
     es: {
       label: 'Español',

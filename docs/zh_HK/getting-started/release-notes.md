@@ -3,9 +3,9 @@ editLink: false
 lastUpdated: false
 ---
 
-# Release notes
+# 版本说明
 
-This section contains release notes for each version of the **Gowebly**.
+本节包含 Gowebly 各版本的发布说明。
 
 ## v1.7.x <Badge type="tip" text="latest" />
 
