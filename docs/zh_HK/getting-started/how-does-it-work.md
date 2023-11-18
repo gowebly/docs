@@ -39,7 +39,7 @@ CLI 还包含一个 HTTP 客户端，可在后台从远程 CDN 下载 [htmx][fro
 
 ## 部署
 
-要将项目成功部署到远程服务器（或云中），CLI 预先准备了 Docker 文件（`docker-compose.yml` 和`Dockerfile`）。它们已经包含了创建与项目完全隔离的容器所需的所有设置。
+要将项目成功部署到远程服务器（或云中），CLI 预先准备了 Docker 文件（`docker-compose.yml` 和 `Dockerfile`）。它们已经包含了创建与项目完全隔离的容器所需的所有设置。
 
 ## 结论
 
