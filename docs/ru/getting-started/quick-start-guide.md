@@ -20,7 +20,7 @@ go run github.com/gowebly/gowebly@latest create
 
 В текущей папке создано веб-приложение. Оно будет использовать пакет **net/http** (в качестве бэкенда Go) и пакет **html/template** (в качестве шаблонизатора). Библиотеки **htmx** и **hyperscript** уже доступны в ваших HTML-шаблонах.
 
-## Использование готовых пакетов для GNU/Linux дистрибутивов
+## Использование готовых для установки пакетов
 
 Загрузите готовые файлы `exe` для Windows, пакеты `deb` (для Debian, Ubuntu), `rpm` (для CentOS, Fedora), `apk` (для Alpine) или Arch Linux со страницы [Releases][repo_releases_url].
 

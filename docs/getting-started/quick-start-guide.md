@@ -20,7 +20,7 @@ That's it! :fire:
 
 A web application has been created in the current folder. It will use the **net/http** package (as a Go backend) and the **html/template** package (as a template engine). The **htmx** and **hyperscript** packages are already available in your HTML templates.
 
-## Use a ready-made packages for GNU/Linux distros
+## Use a ready-made packages
 
 Download ready-made `exe` files for Windows, `deb` (for Debian, Ubuntu), `rpm` (for CentOS, Fedora), `apk` (for Alpine), or Arch Linux packages from the [Releases][repo_releases_url] page.
 
