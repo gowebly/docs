@@ -10,7 +10,7 @@ prev:
 
 <!--@include: ../parts/zh_HK/block_cant-find-answer.md-->
 
-## Docker: 请求的镜像平台与检测到的主机平台不匹配
+## Docker: 请求的图像平台与检测到的主机平台不匹配
 
 官方的 Gowebly [Docker image][docker_gowebly_image_url] 仅适用于 GNU/Linux：
 

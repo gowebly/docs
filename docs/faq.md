@@ -12,7 +12,7 @@ The most common questions that may come up when using the **Gowebly** CLI are co
 
 ## What is the right way to ask a question or report a bug?
 
-Run `doctor` command to get a list of all the required tools, installed on your system:
+Running the `doctor` command will give you a list of all the CLI tools that are installed on your system:
 
 ::: code-group
 ``` bash [CLI]

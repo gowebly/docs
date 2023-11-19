@@ -1,3 +1,9 @@
+---
+next:
+  text: 'FAQ'
+  link: '/faq'
+---
+
 # Build your project
 
 To prepare your project to the production, execute the `build` command:

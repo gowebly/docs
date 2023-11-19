@@ -20,7 +20,65 @@ const userConfig: UserConfig = {
     ru: {
       label: 'Русский',
       lang: 'ru',
-      link: '/ru/'
+      link: '/ru/',
+      themeConfig: {
+        nav: [
+          { text: 'Главная', link: '/ru/' },
+          { text: 'Начало работы', link: '/ru/getting-started' },
+          { text: 'Полное руководство', link: '/ru/complete-user-guide' },
+          { text: 'Вопросы и ответы', link: '/ru/faq' },
+          { text: 'Устранение неполадок', link: '/ru/troubleshooting' }
+        ],
+        sidebar: {
+          '/ru/getting-started': [
+            {
+              text: 'Введение',
+              collapsed: false,
+              items: [
+                { text: 'Что такое Gowebly CLI?', link: '/ru/getting-started' },
+                { text: 'Как это работает?', link: '/ru/getting-started/how-does-it-work' },
+              ]
+            },
+            {
+              text: 'Попробуйте прямо сейчас',
+              collapsed: false,
+              items: [
+                { text: 'Краткое руководство по запуску', link: '/ru/getting-started/quick-start-guide' },
+                { text: 'Библиотека помощников', link: '/ru/getting-started/helpers-library' }
+              ]
+            },
+            {
+              text: 'Разработка',
+              collapsed: false,
+              items: [
+                { text: 'Сборка из исходного кода', link: '/ru/getting-started/build-from-source' },
+                { text: 'Примечания к выпуску', link: '/ru/getting-started/release-notes' },
+                { text: 'Наша команда', link: '/ru/getting-started/our-team' }
+              ]
+            }
+          ],
+          '/ru/complete-user-guide': [
+            {
+              text: 'Введение',
+              collapsed: false,
+              items: [
+                { text: 'Прежде чем начать', link: '/ru/complete-user-guide' }
+              ]
+            },
+            {
+              text: 'Перед началом работы',
+              collapsed: false,
+              items: [
+                { text: 'Установка', link: '/ru/complete-user-guide/installation' },
+                { text: 'Конфигурация', link: '/ru/complete-user-guide/configuration' },
+                { text: 'Создание нового проекта', link: '/ru/complete-user-guide/create-new-project' },
+                { text: 'Запуск проекта', link: '/ru/complete-user-guide/run-your-project' },
+                { text: 'Сборка проекта', link: '/ru/complete-user-guide/build-project' }
+              ]
+            }
+          ]
+        }
+      }
     },
     zh_HK: {
       label: '简体中文',
