@@ -60,7 +60,7 @@ docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest init
 
 当然可以！ :smile: 为了让您直观地了解该项目，我们在 YouTube 上录制了一段简短的演示视频：
 
-<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/qazYscnLku4?si=GQSiQS0Aaib-T6zD&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="380" src="https://www.youtube-nocookie.com/embed/qazYscnLku4?si=GQSiQS0Aaib-T6zD&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## 我还能在哪里读到有关 CLI 的信息？
 
