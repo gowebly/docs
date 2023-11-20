@@ -146,7 +146,65 @@ const userConfig: UserConfig = {
     es: {
       label: 'Español',
       lang: 'es',
-      link: '/es/'
+      link: '/es/',
+      themeConfig: {
+        nav: [
+          { text: 'Inicio', link: '/es/' },
+          { text: 'Para empezar', link: '/es/getting-started' },
+          { text: 'Guía completa del usuario', link: '/es/complete-user-guide' },
+          { text: 'FAQ', link: '/es/faq' },
+          { text: 'Solución de problemas', link: '/es/troubleshooting' }
+        ],
+        sidebar: {
+          '/es/getting-started': [
+            {
+              text: 'Introducción',
+              collapsed: false,
+              items: [
+                { text: '¿Qué es Gowebly CLI?', link: '/es/getting-started' },
+                { text: '¿Cómo funciona?', link: '/es/getting-started/how-does-it-work' },
+              ]
+            },
+            {
+              text: 'Pruébese ahora',
+              collapsed: false,
+              items: [
+                { text: 'Guía de inicio rápido', link: '/es/getting-started/quick-start-guide' },
+                { text: 'Biblioteca de ayudantes', link: '/es/getting-started/helpers-library' }
+              ]
+            },
+            {
+              text: 'Desarrollo',
+              collapsed: false,
+              items: [
+                { text: 'Construir desde la fuente', link: '/es/getting-started/build-from-source' },
+                { text: 'Notas de publicación', link: '/es/getting-started/release-notes' },
+                { text: 'Nuestro equipo', link: '/es/getting-started/our-team' }
+              ]
+            }
+          ],
+          '/es/complete-user-guide': [
+            {
+              text: 'Introducción',
+              collapsed: false,
+              items: [
+                { text: 'Antes de empezar', link: '/es/complete-user-guide' }
+              ]
+            },
+            {
+              text: 'Utilización',
+              collapsed: false,
+              items: [
+                { text: 'Instalación', link: '/es/complete-user-guide/installation' },
+                { text: 'Configuración', link: '/es/complete-user-guide/configuration' },
+                { text: 'Crear un nuevo proyecto', link: '/es/complete-user-guide/create-new-project' },
+                { text: 'Ejecute su proyecto', link: '/es/complete-user-guide/run-your-project' },
+                { text: 'Construir proyecto', link: '/es/complete-user-guide/build-project' }
+              ]
+            }
+          ]
+        }
+      }
     }
   },
   themeConfig: {

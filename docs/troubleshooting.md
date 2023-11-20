@@ -20,9 +20,7 @@ The official **Gowebly** [Docker image][docker_gowebly_image_url] is available f
 Other architectures and operating systems are **not** supported.
 
 ::: tip Windows Subsystem for Linux
-
 Yes, **Gowebly** CLI perfectly works on the [Windows Subsystem for Linux][other_wsl_url] (WSL) too, because it uses Ubuntu as the GNU/Linux distro.
-
 :::
 
 ## Port X is taken by OS

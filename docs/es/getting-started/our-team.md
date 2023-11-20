@@ -2,11 +2,11 @@
 editLink: false
 lastUpdated: false
 next:
-  text: '完整的用户指南'
-  link: '/zh_HK/complete-user-guide'
+  text: 'Guía completa del usuario'
+  link: '/es/complete-user-guide'
 ---
 
-# 我们的团队
+# Nuestro equipo
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
@@ -32,12 +32,12 @@ const members = [
 ]
 </script>
 
-向我们出色的团队问好。
+Saluda a nuestro impresionante equipo.
 
 <VPTeamMembers size="small" :members="members" />
 
-## 贡献者
+## Colaboradores
 
-我们的团队正在不断壮大，但我们一直在寻找新的贡献者！
+Nuestro increíble equipo está creciendo, pero siempre estamos buscando nuevos colaboradores.
 
 <a href="https://github.com/gowebly/gowebly/graphs/contributors" target="_blank"><img width="160" src="https://contrib.rocks/image?repo=gowebly/gowebly" alt="Gowebly contributors"/></a>

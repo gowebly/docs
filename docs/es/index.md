@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Cómo empezar
-      link: /getting-started
+      link: /es/getting-started
     - theme: alt
       text: Vista en GitHub
       link: https://github.com/gowebly/gowebly
