@@ -52,7 +52,7 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: 'Сборка из исходного кода', link: '/ru/getting-started/build-from-source' },
-                { text: 'Примечания к выпуску', link: '/ru/getting-started/release-notes' },
+                { text: 'Примечания к выпуску', link: 'https://github.com/gowebly/gowebly/releases' },
                 { text: 'Наша команда', link: '/ru/getting-started/our-team' }
               ]
             }
@@ -115,7 +115,7 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: '从源头构建', link: '/zh_HK/getting-started/build-from-source' },
-                { text: '发布说明', link: '/zh_HK/getting-started/release-notes' },
+                { text: '发布说明', link: 'https://github.com/gowebly/gowebly/releases' },
                 { text: '我们的团队', link: '/zh_HK/getting-started/our-team' }
               ]
             }
@@ -178,7 +178,7 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: 'Construir desde la fuente', link: '/es/getting-started/build-from-source' },
-                { text: 'Notas de publicación', link: '/es/getting-started/release-notes' },
+                { text: 'Notas de publicación', link: 'https://github.com/gowebly/gowebly/releases' },
                 { text: 'Nuestro equipo', link: '/es/getting-started/our-team' }
               ]
             }
@@ -243,7 +243,7 @@ const userConfig: UserConfig = {
           collapsed: false,
           items: [
             { text: 'Build from the source', link: '/getting-started/build-from-source' },
-            { text: 'Release notes', link: '/getting-started/release-notes' },
+            { text: 'Release notes', link: 'https://github.com/gowebly/gowebly/releases' },
             { text: 'Our team', link: '/getting-started/our-team' }
           ]
         }
