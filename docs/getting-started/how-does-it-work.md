@@ -27,7 +27,7 @@ To be more efficient, the CLI supports the [Templ][backend_ah_templ_url] templat
 
 To create a build for the **frontend** part, the quick and easy [Parcel][frontend_parcel_url] bundler version `2` was chosen. This allowed us to reduce the unnecessarily stressful moment of frontend build to the maximum. No more need to understand configurations, the CLI has already prepared it for you.
 
-At this moment, the CLI supported the following CSS frameworks: [Tailwind CSS][frontend_tailwindcss_url] and [UnoCSS][frontend_unocss_url]. By default, created project will use the minimal CSS styles to demonstration.
+At this moment, the CLI supported the following CSS frameworks: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url] and [daisyUI][frontend_daisyui_url] components library. By default, created project will use the minimal CSS styles to demonstration.
 
 ### JavaScript runtime environment
 

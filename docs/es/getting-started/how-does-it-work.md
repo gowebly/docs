@@ -27,7 +27,7 @@ Para ser más eficiente, la CLI soporta el motor de plantillas [Templ][backend_a
 
 Para crear una compilación para la parte **frontend**, se eligió el rápido y fácil [Parcel][frontend_parcel_url] bundler versión `2`. Esto nos permitió reducir al máximo el momento innecesariamente estresante de la construcción del frontend. Ya no es necesario entender configuraciones, el CLI ya lo ha preparado por ti.
 
-En este momento, el CLI soportaba los siguientes frameworks CSS: [Tailwind CSS][frontend_tailwindcss_url] y [UnoCSS][frontend_unocss_url]. Por defecto, el proyecto creado utilizará los estilos CSS mínimos para la demostración.
+En este momento, la CLI soporta los siguientes frameworks CSS: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url] y [daisyUI][frontend_daisyui_url] biblioteca de componentes. Por defecto, el proyecto creado utilizará los estilos CSS mínimos para la demostración.
 
 ### Entorno de ejecución de JavaScript
 

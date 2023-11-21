@@ -35,7 +35,7 @@ backend:
 
 frontend:
    package_name: project # (string) option can be any name of your `package.json`
-   css_framework: default # (string) option can be one of the values: `tailwindcss`, `unocss`, or `default`
+   css_framework: default # (string) option can be one of the values: `tailwindcss`, `unocss`, `daisyui`, or `default`
    runtime_environment: default # (string) option can be one of the values: `bun`, or `default`
    htmx: latest # (string) option can be any existing version of htmx
    hyperscript: latest # (string) option can be any existing version of hyperscript
@@ -176,11 +176,12 @@ frontend:
 
 The `css_framework` option can be one of the string values:
 
-| Value         | Description                                                            |
-| ------------- | ---------------------------------------------------------------------- |
-| `default`     | Don't use any CSS framework (only default styles for the code example) |
-| `tailwindcss` | Use the [Tailwind CSS][frontend_tailwindcss_url] as a CSS framework    |
-| `unocss`      | Use the [UnoCSS][frontend_unocss_url] as a CSS framework               |
+| Value         | Description                                                                                |
+| ------------- | ------------------------------------------------------------------------------------------ |
+| `default`     | Don't use any CSS framework (only default styles for the code example)                     |
+| `tailwindcss` | Use the [Tailwind CSS][frontend_tailwindcss_url] as a CSS framework                        |
+| `unocss`      | Use the [UnoCSS][frontend_unocss_url] as a CSS framework                                   |
+| `daisyui`     | Use the [daisyUI][frontend_daisyui_url] component library with Tailwind as a CSS framework |
 
 Default value is `default`.
 

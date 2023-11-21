@@ -34,6 +34,7 @@
 [frontend_htmx_url]: https://htmx.org
 [frontend_hyperscript_url]: https://hyperscript.org
 [frontend_tailwindcss_url]: https://tailwindcss.com
+[frontend_daisyui_url]: https://daisyui.com
 [frontend_unocss_url]: https://unocss.dev
 [frontend_nodejs_url]: https://nodejs.org
 [frontend_bun_url]: https://bun.sh

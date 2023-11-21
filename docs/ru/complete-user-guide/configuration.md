@@ -35,7 +35,7 @@ backend:
 
 frontend:
    package_name: project # (string) option can be any name of your `package.json`
-   css_framework: default # (string) option can be one of the values: `tailwindcss`, `unocss`, or `default`
+   css_framework: default # (string) option can be one of the values: `tailwindcss`, `unocss`, `daisyui`, or `default`
    runtime_environment: default # (string) option can be one of the values: `bun`, or `default`
    htmx: latest # (string) option can be any existing version of htmx
    hyperscript: latest # (string) option can be any existing version of hyperscript
