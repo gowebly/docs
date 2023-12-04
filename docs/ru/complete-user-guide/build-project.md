@@ -142,7 +142,7 @@ RUN go mod download
 COPY . .
 
 ENV CGO_ENABLED=0
-RUN go build -ldflags="-s -w" -o gowebly_default ./...
+RUN go build -ldflags="-s -w" -o gowebly_default
 
 FROM scratch
 
