@@ -56,6 +56,7 @@
 [article_devto_article_1_url]: https://dev.to/koddr/a-next-generation-cli-tool-for-building-amazing-web-apps-in-go-using-htmx-hyperscript-336d
 [article_devto_article_2_url]: https://dev.to/koddr/big-update-the-gowebly-cli-now-supports-templ-3gog
 [article_devto_article_3_url]: https://dev.to/koddr/frontend-update-the-gowebly-cli-now-supports-daisyui-components-library-3dmn
+[article_devto_article_4_url]: https://dev.to/koddr/big-frontend-update-the-gowebly-cli-now-supports-bootstrap-and-bulma-1c45
 [article_cloudflare_timeouts_url]: https://blog.cloudflare.com/the-complete-guide-to-golang-net-http-timeouts/
 
 <!-- Other links -->

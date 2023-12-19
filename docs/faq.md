@@ -69,6 +69,7 @@ We prepared articles demonstrating the main features and the major updates:
 - [A next-generation CLI tool for building amazing web apps in Go using htmx & hyperscript][article_devto_article_1_url]
 - [Big update: the Gowebly CLI now supports Templ][article_devto_article_2_url]
 - [Frontend update: the Gowebly CLI now supports daisyUI components library][article_devto_article_3_url]
+- [Big frontend update: the Gowebly CLI now supports Bootstrap and Bulma][article_devto_article_4_url]
 
 ::: tip Want to see your article here?
 If you want to see your article here, feel free to send a [PR][repo_docs_pr_url] to the **Gowebly** Docs repository.
