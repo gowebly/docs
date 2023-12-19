@@ -36,6 +36,8 @@
 [frontend_tailwindcss_url]: https://tailwindcss.com
 [frontend_daisyui_url]: https://daisyui.com
 [frontend_unocss_url]: https://unocss.dev
+[frontend_bootstrap_url]: https://getbootstrap.com
+[frontend_bulma_url]: https://bulma.io
 [frontend_nodejs_url]: https://nodejs.org
 [frontend_bun_url]: https://bun.sh
 [frontend_parcel_url]: https://parceljs.org

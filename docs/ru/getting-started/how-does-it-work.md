@@ -27,7 +27,7 @@ CLI **Gowebly** построен на базе языка программиро
 
 Для создания сборки для **фронтенд**-части был выбран быстрый и простой бандлер [Parcel][frontend_parcel_url] версии `2`. Это позволило максимально сократить излишне напряженный момент сборки фронтенда. Больше не нужно разбираться в конфигурациях, CLI уже все подготовил за вас.
 
-На данный момент CLI поддерживает следующие CSS-фреймворки: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url] и библиотеку компонентов [daisyUI][frontend_daisyui_url]. По умолчанию созданный проект будет использовать минимальные стили CSS для демонстрации.
+На данный момент CLI поддерживает следующие CSS-фреймворки: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url], [Bootstrap][frontend_bootstrap_url], [Bulma][frontend_bulma_url] и библиотеку компонентов [daisyUI][frontend_daisyui_url]. По умолчанию созданный проект будет использовать минимальные CSS-стили для демонстрации.
 
 ### Среда выполнения JavaScript
 

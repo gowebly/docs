@@ -35,7 +35,7 @@ backend:
 
 frontend:
    package_name: project # (string) option can be any name of your `package.json`
-   css_framework: default # (string) option can be one of the values: `tailwindcss`, `unocss`, `daisyui`, or `default`
+   css_framework: default # (string) option can be one of the values: `tailwindcss`, `unocss`, `daisyui`, `bulma`, `bootstrap`, or `default`
    runtime_environment: default # (string) option can be one of the values: `bun`, or `default`
    htmx: latest # (string) option can be any existing version of htmx
    hyperscript: latest # (string) option can be any existing version of hyperscript
@@ -182,6 +182,8 @@ frontend:
 | `tailwindcss` | 使用 [Tailwind CSS][frontend_tailwindcss_url] 作为 CSS 框架          |
 | `unocss`      | 使用 [UnoCSS][frontend_unocss_url] 作为 CSS 框架                     |
 | `daisyui`     | 使用 [daisyUI][frontend_daisyui_url] 组件库和 Tailwind 作为 CSS 框架 |
+| `bulma`       | 使用 [Bulma][frontend_bulma_url] 作为 CSS 框架                       |
+| `bootstrap`   | 使用 [Bootstrap][frontend_bootstrap_url] 作为 CSS 框架               |
 
 默认值为 `default`。
 

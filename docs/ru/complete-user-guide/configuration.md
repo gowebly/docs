@@ -35,7 +35,7 @@ backend:
 
 frontend:
    package_name: project # (string) option can be any name of your `package.json`
-   css_framework: default # (string) option can be one of the values: `tailwindcss`, `unocss`, `daisyui`, or `default`
+   css_framework: default # (string) option can be one of the values: `tailwindcss`, `unocss`, `daisyui`, `bulma`, `bootstrap`, or `default`
    runtime_environment: default # (string) option can be one of the values: `bun`, or `default`
    htmx: latest # (string) option can be any existing version of htmx
    hyperscript: latest # (string) option can be any existing version of hyperscript
@@ -182,6 +182,8 @@ frontend:
 | `tailwindcss` | Использовать [Tailwind CSS][frontend_tailwindcss_url] в качестве CSS-фреймворка                          |
 | `unocss`      | Использовать [UnoCSS][frontend_unocss_url] в качестве CSS-фреймворка                                     |
 | `daisyui`     | Использовать библиотеку компонентов [daisyUI][frontend_daisyui_url] с Tailwind в качестве CSS-фреймворка |
+| `bulma`       | Использовать [Bulma][frontend_bulma_url] в качестве CSS-фреймворка                                       |
+| `bootstrap`   | Использовать [Bootstrap][frontend_bootstrap_url] в качестве CSS-фреймворка                               |
 
 Значение по умолчанию: `default`.
 

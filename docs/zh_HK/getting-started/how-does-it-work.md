@@ -27,7 +27,7 @@ Gowebly CLI 建立在 [Go][go_url] 编程语言之上。
 
 为了创建前端部分的构建，我们选择了快速简便的 [Parcel][frontend_parcel_url] 捆绑程序 `2` 版本。这让我们最大限度地减少了前端构建过程中不必要的压力。无需再了解配置，CLI 已经为你准备好了。
 
-目前，CLI 支持以下 CSS 框架： [Tailwind CSS][frontend_tailwindcss_url]、[UnoCSS][frontend_unocss_url] 和 [daisyUI][frontend_daisyui_url] 组件库。 默认情况下，创建的项目将使用最少的 CSS 样式进行演示。
+目前，CLI 支持以下 CSS 框架： [Tailwind CSS][frontend_tailwindcss_url]、[UnoCSS][frontend_unocss_url]、[Bootstrap][frontend_bootstrap_url]、[Bulma][frontend_bulma_url] 和 [daisyUI][frontend_daisyui_url] 组件库。默认情况下，创建的项目将使用最少的 CSS 样式进行演示。
 
 ### JavaScript 运行时环境
 
