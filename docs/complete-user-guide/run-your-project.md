@@ -16,51 +16,35 @@ docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest run
 ```
 :::
 
-<!--@include: ../parts/block_default_config.md -->
-
-<img width="720" alt="gowebly run" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_run.png">
-
 ## What CLI does for you?
 
 Every time you execute the `run` command for a project, the **Gowebly** CLI does the following under the hood:
 
-| Step  | Description                                                                                                    | Is async? |
-| ----- | -------------------------------------------------------------------------------------------------------------- | :-------: |
-| **1** | **CLI validates the config and applies it to the current project**                                             |    No     |
-| **2** | **CLI prepares the backend part of your project**                                                              |           |
-| 2.1   | If `template_engine` is set to `templ`, CLI runs `templ generate` with a `--watch` option                      |    Yes    |
-| **3** | **CLI prepares the frontend part of your project**                                                             |           |
-| 3.1   | CLI runs a `watch` script from the `package.json` file with the chosen JavaScript runtime environment          |    Yes    |
-| **4** | **CLI downloads minimized versions of htmx and hyperscript from the trusted [unpkg.com][other_unpkg_url] CDN** |    Yes    |
-| **5** | **CLI runs your project in a simple `go run` command and show HTTP logs in the terminal**                      |    No     |
-
-::: tip Asynchronous steps
-The **Gowebly** CLI runs all blocks with asynchronous steps in individual **goroutines**. Therefore, preparing to run your project is several times faster than if you start each step one after another.
-:::
-
-## Diagram
+| Step  | Description                                                              |
+| :---: | ------------------------------------------------------------------------ |
+| **1** | **Start Air tool**                                                       |
+|       | CLI runs your project with live-reloading mode in a simple `air` command |
+| **2** | **Live-reloading mode**                                                  |
+|       | Air tool builds frontend part of your project in production mode         |
+|       | Air tool generates Go functions from `*.templ` templates, if needed      |
+|       | Air tool builds the backend part of your project                         |
+|       | Air tool watches for changes in your project files and rebuilds them     |
 
 For visualization of the **Gowebly** CLI workflow, check the diagram:
 
 ```mermaid
 stateDiagram-v2
-    Validation: Config validation
     Backend: Prepare backend part
     Frontend: Prepare frontend part
-    Downloading: Downloading scripts
-    Goroutines: Individual goroutines
-    Run: Run your project
+    Watch: Watch for changes
+    Changes: Changes occurred
     direction LR
-    [*] --> Validation
-    Validation --> Goroutines
-    state Goroutines {
-        direction LR
-        Backend
-        Frontend
-        Downloading
+    Watch --> Changes
+    state Changes {
+      direction LR
+      Frontend --> Backend
     }
-    Goroutines --> Run
-    Run --> [*]
+    Changes --> Watch
 ```
 
 <!--@include: ../parts/links.md -->

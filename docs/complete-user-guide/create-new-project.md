@@ -22,44 +22,31 @@ docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest create
 
 Every time you execute the `create` command for a project, the **Gowebly** CLI does the following under the hood:
 
-| Step  | Description                                                                                                        | Is async? |
-| ----- | ------------------------------------------------------------------------------------------------------------------ | :-------: |
-| **1** | **CLI generates the structure of your project (folders and files)**                                                |    No     |
-| **2** | **CLI prepares the backend part of your project**                                                                  |           |
-| 2.1   | CLI generates the needed utility files (`go.mod`, backend files, and so on)                                        |    Yes    |
-| 2.3   | CLI runs `go mod tidy` and `go fmt`                                                                                |    Yes    |
-| **3** | **CLI prepares the frontend part of your project**                                                                 |           |
-| 3.1   | CLI generates the `styles.scss` file with minimal styles for the chosen CSS framework                              |    Yes    |
-| 3.2   | CLI generates the needed utility files (`package.json`, config for the chosen CSS framework, and so on)            |    Yes    |
-| 3.3   | CLI runs `install` and `build` scripts from the `package.json` file with the chosen JavaScript runtime environment |    Yes    |
-
-::: tip Asynchronous steps
-The **Gowebly** CLI runs all blocks with asynchronous steps in individual **goroutines**. Therefore, creating a new project is several times faster than if you start each step one after another.
-:::
-
-## Diagram
+| Step  | Description                                                                                                        |
+| :---: | ------------------------------------------------------------------------------------------------------------------ |
+| **1** | **Structure of your project**                                                                                      |
+|       | CLI creates the project folders and all needed miscellaneous files                                                 |
+| **2** | **The backend part of your project**                                                                               |
+|       | CLI generates the backend files (`go.mod`, chosen Go framework files, and so on)                                   |
+|       | CLI runs `go mod tidy` and `go fmt` for the first time                                                             |
+| **3** | **The frontend part of your project**                                                                              |
+|       | CLI generates the `scripts.js` file with importing the chosen reactivity library                                   |
+|       | CLI generates the `styles.scss` file with minimal styles for the chosen CSS framework                              |
+|       | CLI generates the needed utility files (`package.json`, config for the chosen CSS framework, and so on)            |
+|       | CLI runs `install` and `build` scripts from the `package.json` file with the chosen JavaScript runtime environment |
 
 For visualization of the **Gowebly** CLI workflow, check the diagram:
 
 ```mermaid
 stateDiagram-v2
-    Validation: Config validation
     Structure: Generate project structure
     Backend: Prepare backend part
     Frontend: Prepare frontend part
-    Downloading: Downloading scripts
-    Goroutines: Individual goroutines
     direction LR
-    [*] --> Validation
-    Validation --> Structure
-    Structure --> Goroutines
-    state Goroutines {
-        direction LR
-        Backend
-        Frontend
-        Downloading
-    }
-    Goroutines --> [*]
+    [*] --> Structure
+    Structure --> Backend
+    Backend --> Frontend
+    Frontend --> [*]
 ```
 
 ## Project structure after creating
@@ -67,57 +54,56 @@ stateDiagram-v2
 Typically, after running the `create` command, a created project contains the following files and folders:
 
 ::: code-group
-```bash{21,22} [Without template engines]
+```bash{18,19} [Without template engines]
 .
 ├── assets
-│   └── styles.css
+│   ├── scripts.js
+│   └── styles.scss
 ├── static
-│   ├── favicons
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon.ico
-│   │   ├── favicon.png
-│   │   ├── favicon.svg
-│   │   ├── manifest-desktop-screenshot.jpeg
-│   │   ├── manifest-mobile-screenshot.jpeg
-│   │   └── manifest-touch-icon.svg
 │   ├── images
-│   │   └── logo.svg
-│   ├── htmx.min.js
-│   ├── hyperscript.min.js
-│   ├── styles.css
+│   │   └── gowebly.svg
+│   ├── apple-touch-icon.png
+│   ├── favicon.ico
+│   ├── favicon.png
+│   ├── favicon.svg
+│   ├── manifest-desktop-screenshot.jpeg
+│   ├── manifest-mobile-screenshot.jpeg
+│   ├── manifest-touch-icon.svg
 │   └── manifest.json
 ├── templates
 │   ├── pages
 │   │   └── index.html
 │   └── main.html
+├── .air.toml
+├── .dockerignore
 ├── .gitignore
+├── .prettierignore
+├── docker-compose.yml
+├── Dockerfile
 ├── go.mod
 ├── go.sum
 ├── handlers.go
 ├── main.go
 ├── package.json
-├── package-lock.json
+├── prettier.config.js
 └── server.go
 ```
 
-```bash{22,24} [Using Templ]
+```bash{19,21} [Using Templ]
 .
 ├── assets
-│   └── styles.css
+│   ├── scripts.js
+│   └── styles.scss
 ├── static
-│   ├── favicons
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon.ico
-│   │   ├── favicon.png
-│   │   ├── favicon.svg
-│   │   ├── manifest-desktop-screenshot.jpeg
-│   │   ├── manifest-mobile-screenshot.jpeg
-│   │   └── manifest-touch-icon.svg
 │   ├── images
-│   │   └── logo.svg
-│   ├── htmx.min.js
-│   ├── hyperscript.min.js
-│   ├── styles.css
+│   │   └── gowebly.svg
+│   ├── apple-touch-icon.png
+│   ├── favicon.ico
+│   ├── favicon.png
+│   ├── favicon.svg
+│   ├── manifest-desktop-screenshot.jpeg
+│   ├── manifest-mobile-screenshot.jpeg
+│   ├── manifest-touch-icon.svg
 │   └── manifest.json
 ├── templates
 │   ├── pages
@@ -125,13 +111,18 @@ Typically, after running the `create` command, a created project contains the fo
 │   │   └── index.templ
 │   ├── main_templ.go
 │   └── main.templ
+├── .air.toml
+├── .dockerignore
 ├── .gitignore
+├── .prettierignore
+├── docker-compose.yml
+├── Dockerfile
 ├── go.mod
 ├── go.sum
 ├── handlers.go
 ├── main.go
 ├── package.json
-├── package-lock.json
+├── prettier.config.js
 └── server.go
 ```
 :::
