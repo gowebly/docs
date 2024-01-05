@@ -38,15 +38,15 @@ features:
     icon:
       src: /icons/go-frameworks.svg
   - title: Великолепные CSS-фреймворки
-    details: Поддерживаются такие атомарные/утилитарные CSS-фреймворки, как Tailwind и UnoCSS.
+    details: Поддерживает большинство популярных CSS-фреймворков, как Tailwind CSS, UnoCSS, Bootstrap и другие.
     icon:
       src: /icons/css-frameworks.svg
   - title: Современные шаблонизаторы
     details: Поддерживает способ разработки веб-приложений с использованием пакета Templ с горячей перезагрузкой.
     icon:
       src: /icons/template-engines.svg
-  - title: Hot-reloading
-    details: Поддержка режима hot-reloading для CSS-стилей с помощью бандлера Parcel.
+  - title: Live-reloading
+    details: Поддержка режима live-reloading для вашего Go-кода и CSS-стилей с помощью инструмента Air.
     icon:
       src: /icons/hot-reloading.svg
   - title: PWA-ready

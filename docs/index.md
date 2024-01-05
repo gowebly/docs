@@ -38,15 +38,15 @@ features:
     icon:
       src: /icons/go-frameworks.svg
   - title: Beautiful CSS frameworks
-    details: Supports atomic/utility-first CSS frameworks out of the box, such as Tailwind and UnoCSS.
+    details: Supports most of the popular CSS frameworks like Tailwind CSS, UnoCSS, Bootstrap and others.
     icon:
       src: /icons/css-frameworks.svg
   - title: Modern template engines
     details: Supports the way web apps are developed using the Templ package with hot-reloading.
     icon:
       src: /icons/template-engines.svg
-  - title: Hot-reloading
-    details: Supports hot-reloading mode for your CSS styles using Parcel bundler.
+  - title: Live-reloading
+    details: Supports live-reloading mode for your Go code and CSS styles using Air tool.
     icon:
       src: /icons/hot-reloading.svg
   - title: PWA-ready

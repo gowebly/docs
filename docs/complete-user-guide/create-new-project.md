@@ -16,27 +16,22 @@ docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest create
 ```
 :::
 
-<!--@include: ../parts/block_default_config.md -->
-
-<img width="720" alt="gowebly create" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_create.png">
+<img width="100%" alt="gowebly create" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_create.gif"/>
 
 ## What CLI does for you?
 
 Every time you execute the `create` command for a project, the **Gowebly** CLI does the following under the hood:
 
-| Step  | Description                                                                                                                               | Is async? |
-| ----- | ----------------------------------------------------------------------------------------------------------------------------------------- | :-------: |
-| **1** | **CLI validates the config and applies it to the current project**                                                                        |    No     |
-| **2** | **CLI generates the structure of your project (folders and files)**                                                                       |    No     |
-| **3** | **CLI prepares the backend part of your project**                                                                                         |           |
-| 3.1   | CLI generates the needed utility files (`go.mod`, backend files, and so on)                                                               |    Yes    |
-| 3.2   | If `template_engine` is set to `templ`, CLI installs [Templ][backend_ah_templ_url] to your system and runs `templ generate`               |    Yes    |
-| 3.3   | CLI runs `go mod tidy`                                                                                                                    |    Yes    |
-| **4** | **CLI prepares the frontend part of your project**                                                                                        |           |
-| 4.1   | CLI generates the `styles.css` file with minimal styles for the chosen CSS framework                                                      |    Yes    |
-| 4.2   | CLI generates the needed utility files (`package.json`, config for the chosen CSS framework, and so on)                                   |    Yes    |
-| 4.3   | CLI runs `install` and `build:dev` scripts from the `package.json` file with the chosen JavaScript runtime environment for the first time |    Yes    |
-| **5** | **CLI downloads minimized versions of htmx and hyperscript from the trusted [unpkg.com][other_unpkg_url] CDN**                            |    Yes    |
+| Step  | Description                                                                                                        | Is async? |
+| ----- | ------------------------------------------------------------------------------------------------------------------ | :-------: |
+| **1** | **CLI generates the structure of your project (folders and files)**                                                |    No     |
+| **2** | **CLI prepares the backend part of your project**                                                                  |           |
+| 2.1   | CLI generates the needed utility files (`go.mod`, backend files, and so on)                                        |    Yes    |
+| 2.3   | CLI runs `go mod tidy` and `go fmt`                                                                                |    Yes    |
+| **3** | **CLI prepares the frontend part of your project**                                                                 |           |
+| 3.1   | CLI generates the `styles.scss` file with minimal styles for the chosen CSS framework                              |    Yes    |
+| 3.2   | CLI generates the needed utility files (`package.json`, config for the chosen CSS framework, and so on)            |    Yes    |
+| 3.3   | CLI runs `install` and `build` scripts from the `package.json` file with the chosen JavaScript runtime environment |    Yes    |
 
 ::: tip Asynchronous steps
 The **Gowebly** CLI runs all blocks with asynchronous steps in individual **goroutines**. Therefore, creating a new project is several times faster than if you start each step one after another.

@@ -4,15 +4,17 @@
   "version": "1.0.0",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "bunx vitepress dev docs",
-    "build": "bunx vitepress build docs",
-    "preview": "bunx vitepress preview docs"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "mermaid": "^10.6.1",
+    "vitepress": "^1.0.0-rc.35",
+    "vitepress-plugin-mermaid": "^2.0.16",
+    "vue": "^3.4.5"
   },
   "devDependencies": {
-    "mermaid": "^10.6.1",
-    "vitepress": "^1.0.0-rc.32",
-    "vitepress-plugin-mermaid": "^2.0.16",
-    "vue": "^3.3.12",
     "typescript": "^5.3.3"
   }
 }

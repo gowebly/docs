@@ -38,7 +38,7 @@ features:
     icon:
       src: /icons/go-frameworks.svg
   - title: Hermosos frameworks CSS
-    details: Admite marcos CSS atomic/utility-first, como Tailwind y UnoCSS.
+    details: Soporta la mayoría de los frameworks CSS populares como Tailwind CSS, UnoCSS, Bootstrap y otros.
     icon:
       src: /icons/css-frameworks.svg
   - title: Modernos motores de plantillas
@@ -46,7 +46,7 @@ features:
     icon:
       src: /icons/template-engines.svg
   - title: Recarga en caliente
-    details: Admite el modo de recarga en caliente para sus estilos CSS mediante Parcel bundler.
+    details: Admite el modo de recarga en vivo para el código Go y los estilos CSS mediante la herramienta Air.
     icon:
       src: /icons/hot-reloading.svg
   - title: Preparado para PWA

@@ -38,7 +38,7 @@ features:
     icon:
       src: /icons/go-frameworks.svg
   - title: 漂亮的 CSS 框架
-    details: 开箱即支持原子/实用工具优先 CSS 框架，如 Tailwind 和 UnoCSS。
+    details: 支持大多数流行的 CSS 框架，如 Tailwind CSS、UnoCSS、Bootstrap 等。
     icon:
       src: /icons/css-frameworks.svg
   - title: 现代模板引擎
@@ -46,7 +46,7 @@ features:
     icon:
       src: /icons/template-engines.svg
   - title: 热装弹
-    details: 使用 Parcel 捆绑程序，支持 CSS 样式的热加载模式。
+    details: 使用 Air 工具，支持 Go 代码和 CSS 样式的实时重载模式。
     icon:
       src: /icons/hot-reloading.svg
   - title: PWA 就绪

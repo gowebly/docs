@@ -70,10 +70,8 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: 'Установка', link: '/ru/complete-user-guide/installation' },
-                { text: 'Конфигурация', link: '/ru/complete-user-guide/configuration' },
                 { text: 'Создание нового проекта', link: '/ru/complete-user-guide/create-new-project' },
                 { text: 'Запуск проекта', link: '/ru/complete-user-guide/run-your-project' },
-                { text: 'Сборка проекта', link: '/ru/complete-user-guide/build-project' }
               ]
             }
           ]
@@ -133,10 +131,8 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: '安装', link: '/zh_HK/complete-user-guide/installation' },
-                { text: '配置', link: '/zh_HK/complete-user-guide/configuration' },
                 { text: '创建新项目', link: '/zh_HK/complete-user-guide/create-new-project' },
                 { text: '运行项目', link: '/zh_HK/complete-user-guide/run-your-project' },
-                { text: '建设项目', link: '/zh_HK/complete-user-guide/build-project' }
               ]
             }
           ]
@@ -196,10 +192,8 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: 'Instalación', link: '/es/complete-user-guide/installation' },
-                { text: 'Configuración', link: '/es/complete-user-guide/configuration' },
                 { text: 'Crear un nuevo proyecto', link: '/es/complete-user-guide/create-new-project' },
                 { text: 'Ejecute su proyecto', link: '/es/complete-user-guide/run-your-project' },
-                { text: 'Construir proyecto', link: '/es/complete-user-guide/build-project' }
               ]
             }
           ]
@@ -261,10 +255,8 @@ const userConfig: UserConfig = {
           collapsed: false,
           items: [
             { text: 'Installation', link: '/complete-user-guide/installation' },
-            { text: 'Configuration', link: '/complete-user-guide/configuration' },
             { text: 'Create a new project', link: '/complete-user-guide/create-new-project' },
             { text: 'Run your project', link: '/complete-user-guide/run-your-project' },
-            { text: 'Build project', link: '/complete-user-guide/build-project' }
           ]
         }
       ]
