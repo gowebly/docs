@@ -19,23 +19,15 @@ CLI 可生成一个即用型项目，帮助开发人员尽快了解 Go + htmx + 
 stateDiagram-v2
     direction LR
         Install: 安装 CLI
-        Init: 初始化配置
         Doctor: 查看诊断
         Create: 创建新项目
         Run: 运行项目
-        Build: 建设项目
-        Deploy: 部署到服务器
         [*] --> Install
-        Install --> Init
         Install --> Create
         Install --> Doctor
         Doctor --> [*]
-        Init --> Create
         Create --> Run
         Run --> [*]
-        Create --> Build
-        Build --> Deploy
-        Deploy --> [*]
 ```
 
 <!--@include: ../parts/links.md-->

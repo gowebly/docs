@@ -1,6 +1,9 @@
 ---
 editLink: false
 lastUpdated: false
+prev:
+  text: 'Build from the source'
+  link: '/getting-started/build-from-source'
 next:
   text: 'Complete user guide'
   link: '/complete-user-guide'
@@ -19,14 +22,6 @@ const members = [
     links: [
       { icon: 'github', link: 'https://github.com/koddr' },
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/koddr' }
-    ]
-  },
-  {
-    avatar: 'https://www.github.com/truewebartisans.png',
-    name: 'True Web Artisans',
-    title: 'Contribution & Support',
-    links: [
-      { icon: 'github', link: 'https://github.com/truewebartisans' }
     ]
   }
 ]

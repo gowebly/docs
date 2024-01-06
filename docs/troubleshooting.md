@@ -10,19 +10,6 @@ The most common malfunctions that may come up when using the **Gowebly** CLI.
 
 <!--@include: ./parts/block_cant-find-answer.md-->
 
-## Docker: The requested image's platform does not match the detected host platform
-
-The official **Gowebly** [Docker image][docker_gowebly_image_url] is available for GNU/Linux only:
-
-- `linux/amd64`
-- `linux/arm64`
-
-Other architectures and operating systems are **not** supported.
-
-::: tip Windows Subsystem for Linux
-Yes, **Gowebly** CLI perfectly works on the [Windows Subsystem for Linux][other_wsl_url] (WSL) too, because it uses Ubuntu as the GNU/Linux distro.
-:::
-
 ## Port X is taken by OS
 
 Some operating systems may take up ports that you want to use to develop and deploy your application. You can check if a port is taken by OS by running the command:
@@ -41,13 +28,45 @@ netstat -aon
 ```
 :::
 
-To change the port number, replace `port` option in the `.gowebly.yml` file with the port number you want to use for the backend:
+There are two ways to change it.
 
-``` yaml{2}
-backend:
-  port: 9000
+1. Set the port number in the `BACKEND_PORT` environment variable before running:
+
+::: code-group
+``` bash [CLI]
+BACKEND_PORT=9000 gowebly run
 ```
 
-Re-run your application and go to the `http://localhost:9000`.
+``` yaml{7,9} [Docker]
+# docker-compose.yml
+
+services:
+  gowebly_default:
+    # ...
+    ports:
+      - '9000:9000'
+    environment:
+      BACKEND_PORT: 9000 # same as the exposed container port
+    # ...
+
+# ...
+```
+:::
+
+2. Edit the port number in the `server.go` file:
+
+``` go{4}
+// runServer runs a new HTTP server with the loaded environment variables.
+func runServer() error {
+	// Validate environment variables.
+	port, err := strconv.Atoi(gowebly.Getenv("BACKEND_PORT", "9000"))
+	if err != nil {
+		return err
+	}
+
+	// ...
+```
+
+Now, you can open your browser and go to the `http://localhost:9000`.
 
 <!--@include: ./parts/links.md-->

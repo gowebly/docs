@@ -12,18 +12,6 @@ Then, use the [`go install`][go_install_url] command:
 go install github.com/gowebly/gowebly@latest
 ```
 
-## Docker
-
-Feel free to using **Gowebly** CLI from our [official Docker image][docker_gowebly_image_url] and run it in the container:
-
-``` bash
-docker pull gowebly/gowebly:latest
-```
-
-::: danger Limitations of the Docker image
-This Docker image works **only** on the GNU/Linux systems (`amd64` or `arm64`, including WSL).
-:::
-
 ## Homebrew
 
 GNU/Linux and Apple macOS users available way to install **Gowebly** CLI via [Homebrew][other_brew_url].

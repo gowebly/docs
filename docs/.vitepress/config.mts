@@ -70,6 +70,7 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: 'Установка', link: '/ru/complete-user-guide/installation' },
+                { text: 'Info about your system', link: '/ru/complete-user-guide/info-about-system' },
                 { text: 'Создание нового проекта', link: '/ru/complete-user-guide/create-new-project' },
                 { text: 'Запуск проекта', link: '/ru/complete-user-guide/run-your-project' },
               ]
@@ -131,6 +132,7 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: '安装', link: '/zh_HK/complete-user-guide/installation' },
+                { text: 'Info about your system', link: '/zh_HK/complete-user-guide/info-about-system' },
                 { text: '创建新项目', link: '/zh_HK/complete-user-guide/create-new-project' },
                 { text: '运行项目', link: '/zh_HK/complete-user-guide/run-your-project' },
               ]
@@ -192,6 +194,7 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: 'Instalación', link: '/es/complete-user-guide/installation' },
+                { text: 'Info about your system', link: '/es/complete-user-guide/info-about-system' },
                 { text: 'Crear un nuevo proyecto', link: '/es/complete-user-guide/create-new-project' },
                 { text: 'Ejecute su proyecto', link: '/es/complete-user-guide/run-your-project' },
               ]
@@ -255,6 +258,7 @@ const userConfig: UserConfig = {
           collapsed: false,
           items: [
             { text: 'Installation', link: '/complete-user-guide/installation' },
+            { text: 'Info about your system', link: '/complete-user-guide/info-about-system' },
             { text: 'Create a new project', link: '/complete-user-guide/create-new-project' },
             { text: 'Run your project', link: '/complete-user-guide/run-your-project' },
           ]
@@ -262,14 +266,7 @@ const userConfig: UserConfig = {
       ]
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/gowebly/gowebly' },
-      {
-        icon: {
-          svg: '<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="m30.679 13.367c-.613-.404-1.366-.645-2.175-.645-.093 0-.185.003-.276.009l.012-.001c-.446.001-.882.041-1.306.115l.046-.007c-.235-1.357-1.025-2.495-2.122-3.191l-.019-.011-.429-.248-.282.408c-.336.512-.599 1.108-.756 1.745l-.008.039c-.089.324-.14.696-.14 1.08 0 .831.24 1.605.654 2.258l-.01-.017c-.637.299-1.381.488-2.164.524h-.013-19.729c-.516.001-.934.418-.936.933-.001.056-.001.123-.001.19 0 1.751.317 3.428.897 4.977l-.032-.098c.558 1.633 1.612 2.975 2.98 3.881l.028.017c1.744.903 3.808 1.432 5.995 1.432.207 0 .412-.005.617-.014l-.029.001h.06c1.272 0 2.515-.121 3.72-.352l-.123.02c1.795-.336 3.395-.939 4.845-1.773l-.074.039c1.257-.735 2.331-1.621 3.245-2.652l.012-.014c1.325-1.56 2.403-3.381 3.145-5.365l.041-.125h.276c.055.002.119.004.183.004 1.226 0 2.34-.481 3.163-1.265l-.002.002c.377-.358.676-.793.873-1.281l.009-.024.122-.359zm-26.889 1.482h2.646c.127-.001.23-.104.23-.231v-2.355-.001c0-.127-.103-.23-.23-.231h-2.646c-.127.001-.23.104-.23.231v2.356.001c0 .127.103.23.23.23h.001zm3.644 0h2.644c.127 0 .231-.103.231-.231v-2.355-.001c0-.127-.103-.23-.23-.231h-2.646c-.128 0-.232.104-.232.232v2.355c.001.128.104.231.232.231zm3.698 0h2.646c.127-.001.23-.104.23-.231v-2.355-.001c0-.127-.103-.23-.23-.231h-2.646c-.127.001-.23.104-.23.231v2.356c0 .127.103.231.231.231zm3.656 0h2.643c.128 0 .231-.103.232-.231v-2.355c0-.128-.104-.232-.232-.232h-2.643c-.127 0-.231.103-.231.231v2.356.001c0 .127.103.23.23.23zm-7.354-3.388h2.644c.128-.001.231-.104.231-.232v-2.355c0-.127-.103-.231-.231-.231h-2.644c-.128 0-.231.103-.232.231v2.355c.001.128.104.231.232.232zm3.698 0h2.646c.127-.001.23-.105.23-.232v-2.355c0-.127-.103-.231-.231-.231h-2.643c-.127 0-.231.103-.231.231v2.355c.001.128.103.231.231.232zm3.656 0h2.643c.128-.001.231-.104.232-.232v-2.355c-.001-.128-.104-.231-.232-.231h-2.643c-.127 0-.231.103-.231.231v2.355c0 .128.103.231.231.232zm0-3.388h2.643c.128 0 .232-.104.232-.232v-2.356c-.001-.128-.104-.231-.232-.231h-2.643c-.127 0-.231.103-.231.231v2.356.001c0 .127.103.23.23.23h.001zm3.687 6.776h2.644c.128 0 .231-.103.232-.231v-2.355c0-.128-.104-.232-.232-.232h-2.644c-.128 0-.231.103-.231.231v2.356c0 .127.103.231.231.231z"/></svg>'
-        },
-        link: 'https://hub.docker.com/r/gowebly/gowebly',
-        ariaLabel: 'docker hub'
-      }
+      { icon: 'github', link: 'https://github.com/gowebly/gowebly' }
     ],
     footer: {
       message: "<a href='https://github.com/gowebly/gowebly' target='_blank'>Gowebly</a> CLI is 100% free and Open Source project under the Apache 2.0 license.<br/>Official logo distributed under the Creative Commons License (CC BY-SA 4.0 International).",

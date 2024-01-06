@@ -19,23 +19,15 @@ Esto se muestra más claramente en el siguiente diagrama:
 stateDiagram-v2
     direction LR
         Install: Instalar CLI
-        Init: Inicializar configuración
         Doctor: Ver diagnósticos
         Create: Crear un nuevo proyecto
         Run: Ejecutar proyecto
-        Build: Construir proyecto
-        Deploy: Despliegue en el servidor
         [*] --> Install
-        Install --> Init
         Install --> Create
         Install --> Doctor
         Doctor --> [*]
-        Init --> Create
         Create --> Run
         Run --> [*]
-        Create --> Build
-        Build --> Deploy
-        Deploy --> [*]
 ```
 
 <!--@include: ../parts/links.md-->

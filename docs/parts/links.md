@@ -3,9 +3,6 @@
 [repo_issues_url]: https://github.com/gowebly/gowebly/issues
 [repo_releases_url]: https://github.com/gowebly/gowebly/releases
 [repo_discussions_url]: https://github.com/gowebly/gowebly/discussions
-
-[repo_default_config]: https://github.com/gowebly/gowebly/blob/main/internal/attachments/configs/default.yml
-
 [repo_docs_url]: https://github.com/gowebly/docs
 [repo_docs_pr_url]: https://github.com/gowebly/docs/pulls
 
@@ -27,7 +24,8 @@
 [backend_echo_url]: https://github.com/labstack/echo
 [backend_chi_url]: https://github.com/go-chi/chi
 [backend_httprouter_url]: https://github.com/julienschmidt/httprouter
-[backend_ah_templ_url]: https://github.com/a-h/templ
+[backend_a_h_templ_url]: https://github.com/a-h/templ
+[backend_angelofallars_go_htmx_url]: https://github.com/angelofallars/htmx-go
 
 <!-- Frontend links -->
 
@@ -35,16 +33,14 @@
 [frontend_hyperscript_url]: https://hyperscript.org
 [frontend_tailwindcss_url]: https://tailwindcss.com
 [frontend_daisyui_url]: https://daisyui.com
+[frontend_flowbite_url]: https://flowbite.com
 [frontend_unocss_url]: https://unocss.dev
 [frontend_bootstrap_url]: https://getbootstrap.com
 [frontend_bulma_url]: https://bulma.io
 [frontend_nodejs_url]: https://nodejs.org
 [frontend_bun_url]: https://bun.sh
 [frontend_parcel_url]: https://parceljs.org
-
-<!-- Docker links -->
-
-[docker_gowebly_image_url]: https://hub.docker.com/repository/docker/gowebly/gowebly
+[frontend_prettier_url]: https://prettier.io
 
 <!-- Proxy links -->
 
@@ -65,4 +61,3 @@
 [other_wsl_url]: https://learn.microsoft.com/en-us/windows/wsl/
 [other_goreleaser_url]: https://goreleaser.com
 [other_brew_url]: https://brew.sh
-[other_unpkg_url]: https://unpkg.com

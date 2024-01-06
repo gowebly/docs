@@ -1,4 +1,7 @@
 ---
+prev:
+  text: 'Complete user guide'
+  link: '/complete-user-guide'
 next:
   text: 'Troubleshooting'
   link: '/troubleshooting'
@@ -12,7 +15,7 @@ The most common questions that may come up when using the **Gowebly** CLI are co
 
 ## What is the right way to ask a question or report a bug?
 
-Running the `doctor` command will give you a list of all the CLI tools that are installed on your system:
+Running the `doctor` command will give you a list of all the tools you need to work properly with the **Gowebly** CLI that are installed on your system:
 
 ::: code-group
 ``` bash [CLI]
@@ -22,10 +25,6 @@ gowebly doctor
 ``` bash [Go]
 go run github.com/gowebly/gowebly@latest doctor
 ```
-
-``` bash [Docker]
-docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest doctor
-```
 :::
 
 Next, open [GitHub Issues][repo_issues_url] and follow the instructions.
@@ -34,33 +33,11 @@ Next, open [GitHub Issues][repo_issues_url] and follow the instructions.
 Don't forget to include output of the `doctor` command to the issue description! This is a very helpful information for the debugging process.
 :::
 
-## How to change the default configuration?
-
-You can change the default configuration in the `.gowebly.yml` file.
-
-Create the `.gowebly.yml` file in the root of your project:
-
-::: code-group
-``` bash [CLI]
-gowebly init
-```
-
-``` bash [Go]
-go run github.com/gowebly/gowebly@latest init
-```
-
-``` bash [Docker]
-docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest init
-```
-:::
-
-Change the settings to your needs and `create`, `run` or `build` your project as usual.
-
 ## Is it possible to see a demonstration of how the CLI works without installation?
 
-Yes, of course! :smile: To give you a visual understanding of the project, we have recorded a short demonstration video on YouTube:
+Yes, of course! :smile: To give you a visual understanding of the project, we have recorded a short demonstration GIF for `gowebly create` command:
 
-<iframe width="100%" height="380" src="https://www.youtube-nocookie.com/embed/qazYscnLku4?si=GQSiQS0Aaib-T6zD&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<img width="100%" alt="gowebly create" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_create.gif"/>
 
 ## Where else can I read something about the CLI?
 

@@ -19,23 +19,15 @@ CLI генерирует готовый к использованию проек
 stateDiagram-v2
     direction LR
         Install: Установка CLI
-        Init: Инициализация конфига
         Doctor: Просмотр диагностики
         Create: Создание нового проекта
         Run: Запуск проекта
-        Build: Сборка проекта
-        Deploy: Развертывание на сервере
         [*] --> Install
-        Install --> Init
         Install --> Create
         Install --> Doctor
         Doctor --> [*]
-        Init --> Create
         Create --> Run
         Run --> [*]
-        Create --> Build
-        Build --> Deploy
-        Deploy --> [*]
 ```
 
 <!--@include: ../parts/links.md-->
