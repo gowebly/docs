@@ -1,6 +1,6 @@
-# 创建新项目
+# Create a new project
 
-要启动一个新项目，请执行 `create` 命令：
+To start a new project, execute the `create` command:
 
 ::: code-group
 ```bash [CLI]
@@ -10,117 +10,65 @@ gowebly create
 ```bash [Go]
 go run github.com/gowebly/gowebly@latest create
 ```
-
-```bash [Docker]
-docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest create
-```
 :::
+
+And result will be:
 
 <img width="100%" alt="gowebly create" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_create.gif"/>
 
-## CLI 能为你做什么？
-
-每次执行项目的 `create` 命令时，Gowebly CLI 都会执行以下工作：
-
-| 步骤  | 说明                                                                                                                  | 是异步吗？ |
-| ----- | --------------------------------------------------------------------------------------------------------------------- | :--------: |
-| **1** | CLI 验证配置并将其应用于当前项目                                                                                      |    没有    |
-| **2** | CLI 生成项目结构（文件夹和文件）                                                                                      |    没有    |
-| **3** | CLI 准备项目的后台部分                                                                                                |            |
-| 3.1   | CLI 生成所需的实用程序文件（`go.mod`、后端文件等）。                                                                  |     是     |
-| 3.2   | 如果将 `template_engine` 设置为 `templ`，CLI 会在系统中安装 [Templ][backend_ah_templ_url]，并运行 `templ generate` 。 |     是     |
-| 3.3   | CLI 运行 `go mod tidy`                                                                                                |     是     |
-| **4** | CLI 准备项目的前端部分                                                                                                |            |
-| 4.1   | CLI 为所选 CSS 框架生成包含最小样式的 `styles.css` 文件                                                               |     是     |
-| 4.2   | CLI 会生成所需的实用程序文件（`package.json`、所选 CSS 框架的配置等）。                                               |     是     |
-| 4.3   | CLI 首次使用选定的 JavaScript 运行时环境运行 `package.json` 文件中的 `install` 和 `build:dev` 脚本                    |     是     |
-| **5** | CLI 从可信的 [unpkg.com][other_unpkg_url] CDN 下载最小化版本的 htmx 和 hyperscript。                                  |     是     |
-
-::: tip 异步步骤
-Gowebly CLI 在单个 goroutines 中运行所有具有异步步骤的模块。因此，创建一个新项目要比逐个启动每个步骤快几倍。
-:::
-
-## 图表
-
-有关 Gowebly CLI 工作流程的可视化，请查看示意图：
-
-```mermaid
-stateDiagram-v2
-    Validation: 配置验证
-    Structure: 生成项目结构
-    Backend: 准备后台部分
-    Frontend: 准备前端部分
-    Downloading: 下载脚本
-    Goroutines: 单个程序
-    direction LR
-    [*] --> Validation
-    Validation --> Structure
-    Structure --> Goroutines
-    state Goroutines {
-        direction LR
-        Backend
-        Frontend
-        Downloading
-    }
-    Goroutines --> [*]
-```
-
-## 创建后的项目结构
-
-通常情况下，运行 `create` 命令后，创建的项目包含以下文件和文件夹：
+Typically, the created project contains the following files and folders:
 
 ::: code-group
-```bash{21,22} [无模板引擎]
+```bash{18,19} [Using html/template]
 .
 ├── assets
-│   └── styles.css
+│   ├── scripts.js
+│   └── styles.scss
 ├── static
-│   ├── favicons
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon.ico
-│   │   ├── favicon.png
-│   │   ├── favicon.svg
-│   │   ├── manifest-desktop-screenshot.jpeg
-│   │   ├── manifest-mobile-screenshot.jpeg
-│   │   └── manifest-touch-icon.svg
 │   ├── images
-│   │   └── logo.svg
-│   ├── htmx.min.js
-│   ├── hyperscript.min.js
-│   ├── styles.css
+│   │   └── gowebly.svg
+│   ├── apple-touch-icon.png
+│   ├── favicon.ico
+│   ├── favicon.png
+│   ├── favicon.svg
+│   ├── manifest-desktop-screenshot.jpeg
+│   ├── manifest-mobile-screenshot.jpeg
+│   ├── manifest-touch-icon.svg
 │   └── manifest.json
 ├── templates
 │   ├── pages
 │   │   └── index.html
 │   └── main.html
+├── .air.toml
+├── .dockerignore
 ├── .gitignore
+├── .prettierignore
+├── docker-compose.yml
+├── Dockerfile
 ├── go.mod
 ├── go.sum
 ├── handlers.go
 ├── main.go
 ├── package.json
-├── package-lock.json
+├── prettier.config.js
 └── server.go
 ```
 
-```bash{22,24} [使用 Templ]
+```bash{19,21} [Using Templ]
 .
 ├── assets
-│   └── styles.css
+│   ├── scripts.js
+│   └── styles.scss
 ├── static
-│   ├── favicons
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon.ico
-│   │   ├── favicon.png
-│   │   ├── favicon.svg
-│   │   ├── manifest-desktop-screenshot.jpeg
-│   │   ├── manifest-mobile-screenshot.jpeg
-│   │   └── manifest-touch-icon.svg
 │   ├── images
-│   │   └── logo.svg
-│   ├── htmx.min.js
-│   ├── hyperscript.min.js
-│   ├── styles.css
+│   │   └── gowebly.svg
+│   ├── apple-touch-icon.png
+│   ├── favicon.ico
+│   ├── favicon.png
+│   ├── favicon.svg
+│   ├── manifest-desktop-screenshot.jpeg
+│   ├── manifest-mobile-screenshot.jpeg
+│   ├── manifest-touch-icon.svg
 │   └── manifest.json
 ├── templates
 │   ├── pages
@@ -128,19 +76,55 @@ stateDiagram-v2
 │   │   └── index.templ
 │   ├── main_templ.go
 │   └── main.templ
+├── .air.toml
+├── .dockerignore
 ├── .gitignore
+├── .prettierignore
+├── docker-compose.yml
+├── Dockerfile
 ├── go.mod
 ├── go.sum
 ├── handlers.go
 ├── main.go
 ├── package.json
-├── package-lock.json
+├── prettier.config.js
 └── server.go
 ```
 :::
 
-::: danger 由 Templ 自动生成的文件
-请不要编辑项目的 `./templates` 文件夹中的 `*_templ.go` Go 文件！它们是由 Templ CLI 从 `*.templ` 模板中自动生成的。
+::: danger Auto-generated files by Templ
+Please do **not** edit `*_templ.go` Go files in the `./templates` folder of your project! They're auto-generated by the **Templ** CLI from `*.templ` templates.
 :::
+
+## What CLI does for you?
+
+Every time you execute the `create` command for a project, the **Gowebly** CLI does the following under the hood:
+
+| Step  | Description                                                                                                      |
+| :---: | ---------------------------------------------------------------------------------------------------------------- |
+| **1** | **The structure of your project**                                                                                |
+|       | CLI creates the project folders and all needed miscellaneous files                                               |
+| **2** | **The backend part of your project**                                                                             |
+|       | CLI generates the backend files (`go.mod`, chosen Go framework files, and so on)                                 |
+|       | CLI runs `go mod tidy` and `go fmt` for the first time                                                           |
+| **3** | **The frontend part of your project**                                                                            |
+|       | CLI generates the `scripts.js` file with importing the chosen reactivity library                                 |
+|       | CLI generates the `styles.scss` file with minimal styles for the chosen CSS framework                            |
+|       | CLI generates the needed utility files (`package.json`, config for the chosen CSS framework, and so on)          |
+|       | CLI runs `install` and `build` scripts from the `package.json` file with the chosen frontend runtime environment |
+
+To visualize the workflow, please refer to the diagram:
+
+```mermaid
+stateDiagram-v2
+    Structure: Generate project structure
+    Backend: Prepare backend part
+    Frontend: Prepare frontend part
+    direction LR
+    [*] --> Structure
+    Structure --> Backend
+    Backend --> Frontend
+    Frontend --> [*]
+```
 
 <!--@include: ../../parts/links.md -->

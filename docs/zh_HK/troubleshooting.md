@@ -1,31 +1,18 @@
 ---
 prev:
-  text: '常见问题'
+  text: 'FAQ'
   link: '/zh_HK/faq'
 ---
 
-# 故障排除
+# Troubleshooting
 
-使用 Gowebly CLI 时可能出现的最常见故障。
+The most common malfunctions that may come up when using the **Gowebly** CLI.
 
-<!--@include: ../parts/zh_HK/block_cant-find-answer.md-->
+<!--@include: ../parts/block_cant-find-answer.md-->
 
-## Docker: 请求的图像平台与检测到的主机平台不匹配
+## Port X is taken by OS
 
-官方的 Gowebly [Docker image][docker_gowebly_image_url] 仅适用于 GNU/Linux：
-
-- `linux/amd64`
-- `linux/arm64`
-
-不支持其他架构和操作系统。
-
-::: tip Windows Linux 子系统
-是的，Gowebly CLI 在 [Windows Subsystem for Linux][other_wsl_url]（WSL）上也能完美运行，因为它使用 Ubuntu 作为 GNU/Linux 发行版。
-:::
-
-## 端口 X 被操作系统占用
-
-某些操作系统可能会占用您想用来开发和部署应用程序的端口。您可以运行以下命令检查端口是否被操作系统占用：
+Some operating systems may take up ports that you want to use to develop and deploy your application. You can check if a port is taken by OS by running the command:
 
 ::: code-group
 ``` bash [GNU/Linux]
@@ -41,13 +28,45 @@ netstat -aon
 ```
 :::
 
-要更改端口号，请将文件 `.gowebly.yml` 中的 `port` 选项替换为后端要使用的端口号：
+There are two ways to change it.
 
-``` yaml{2}
-backend:
-  port: 9000
+1. Set the port number in the `BACKEND_PORT` environment variable before running:
+
+::: code-group
+``` bash [CLI]
+BACKEND_PORT=9000 gowebly run
 ```
 
-重新运行应用程序并转到 `http://localhost:9000`。
+``` yaml{7,9} [Docker]
+# docker-compose.yml
+
+services:
+  gowebly_default:
+    # ...
+    ports:
+      - '9000:9000'
+    environment:
+      BACKEND_PORT: 9000 # same as the exposed container port
+    # ...
+
+# ...
+```
+:::
+
+2. Edit the port number in the `server.go` file:
+
+``` go{4}
+// runServer runs a new HTTP server with the loaded environment variables.
+func runServer() error {
+	// Validate environment variables.
+	port, err := strconv.Atoi(gowebly.Getenv("BACKEND_PORT", "9000"))
+	if err != nil {
+		return err
+	}
+
+	// ...
+```
+
+Now, you can open your browser and go to the `http://localhost:9000`.
 
 <!--@include: ../parts/links.md-->

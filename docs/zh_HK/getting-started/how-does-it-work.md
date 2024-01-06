@@ -3,46 +3,64 @@ editLink: false
 lastUpdated: false
 ---
 
-# 它是如何工作的？
+# How does it work?
 
-本节将帮助您了解 Gowebly CLI 的工作原理。
+This section will help you understand how **Gowebly** CLI works.
 
-<!--@include: ../../parts/zh_HK/block_want-to-try.md-->
+<!--@include: ../../parts/block_want-to-try.md-->
 
-Gowebly CLI 建立在 [Go][go_url] 编程语言之上。
+The **Gowebly** CLI is built on top of the [Go][go_url] programming language.
 
-因此，它可以作为可执行应用程序在任何支持的系统和架构上成功运行。Gowebly CLI 生成的所有项目模板（包括后台和前台）都已包含在此可执行文件中。也就是说，使用 CLI 不需要任何额外的文件。
+Therefore, it can run successfully on any supported system and architecture as an executable application. All the templates for the project (both backend and frontend) that it generates as a result of its work are already included in this executable. That is, you do not need any additional files to work with the CLI.
 
-由于使用了 goroutines，CLI 在引擎盖下运行的许多进程都是并行执行的。
+## Backend part
 
-## 后台部分
+The templates for the **backend** part of your project have been thoroughly tested and contain only the features and parameters you need to get started. You can use them as a good start and improve them as your project grows.
 
-项目后台部分的模板已经过全面测试，只包含您开始工作所需的功能和参数。您可以将它们作为一个良好的开端，并随着项目的发展不断改进。
+At this moment, the CLI supported the following Go web frameworks: [Fiber][backend_fiber_url], [Gin][backend_gin_url], [Echo][backend_echo_url], [Chi][backend_chi_url] and [HttpRouter][backend_httprouter_url]. By default, created project will use the built-in [net/http][backend_net_http_url] package.
 
-目前，CLI 支持以下 Go 网络框架： [Fiber][backend_fiber_url]、[Gin][backend_gin_url]、[Echo][backend_echo_url]、[Chi][backend_chi_url] 和 [HttpRouter][backend_httprouter_url]。默认情况下，创建的项目将使用内置的 [net/http][backend_net_http_url] 包。
+### Server layer for htmx
 
-为了提高效率，CLI 支持 [Templ][backend_ah_templ_url] 模板引擎。在它的帮助下，您无需离开传统的 Go 环境，就能为您的项目快速创建用户界面。所有模板都是普通的 Go 函数，无需创建额外的 HTML 模板和处理内置的 Go 模板引擎（来自 `html/template` 软件包）。
+The CLI uses the [htmx-go][backend_angelofallars_go_htmx_url] package, which provides a more convenient API for using the [htmx][frontend_htmx_url] server layer in the backend part of your project.
 
-## 前端部分
+::: warning Please note
+All web frameworks are supported this package, except **Fiber**. As soon as its developers provide an adapter for integration or write their own wrapper to work with.
+:::
 
-为了创建前端部分的构建，我们选择了快速简便的 [Parcel][frontend_parcel_url] 捆绑程序 `2` 版本。这让我们最大限度地减少了前端构建过程中不必要的压力。无需再了解配置，CLI 已经为你准备好了。
+### Templ
 
-目前，CLI 支持以下 CSS 框架： [Tailwind CSS][frontend_tailwindcss_url]、[UnoCSS][frontend_unocss_url]、[Bootstrap][frontend_bootstrap_url]、[Bulma][frontend_bulma_url] 和 [daisyUI][frontend_daisyui_url] 组件库。默认情况下，创建的项目将使用最少的 CSS 样式进行演示。
+To be more efficient, the CLI supports the [Templ][backend_a_h_templ_url] templating engine. With its help, you can rapidly create UIs for your project without leaving the traditional Go environment.
 
-### JavaScript 运行时环境
+All templates are regular Go functions, without having to create additional HTML templates and deal with the built-in Go templating engine (from the `html/template` package).
 
-我们紧跟前端开发工具的最新更新，因此 CLI 支持两种 JavaScript 运行时环境：标准的 [Node.js][frontend_nodejs_url]，以及新的、速度极快的 [Bun][frontend_bun_url]（向后兼容 Node.js）。您可以在 CLI 设置中为自己的项目选择最合适的方式。
+## Frontend part
 
-### htmx 和 hyperscript
+To create a build for the **frontend** part, the quick and easy [Parcel][frontend_parcel_url] bundler version `2` was chosen. This allowed us to reduce the unnecessarily stressful moment of frontend build to the maximum.
 
-CLI 还包含一个 HTTP 客户端，可在后台从远程 CDN 下载 [htmx][frontend_htmx_url] 和 [hyperscript][frontend_hyperscript_url] JavaScript 文件，以便在项目中进一步使用。
+No more need to understand configurations, the CLI has already prepared it for you.
 
-## 部署
+At this moment, the CLI supported the following CSS frameworks: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url], [Bootstrap][frontend_bootstrap_url], [Bulma][frontend_bulma_url], [daisyUI][frontend_daisyui_url] and [Flowbite][frontend_flowbite_url] components library. By default, created project will use the minimal CSS styles to demonstration.
 
-要将项目成功部署到远程服务器（或云中），CLI 预先准备了 Docker 文件（`docker-compose.yml` 和 `Dockerfile`）。它们已经包含了创建与项目完全隔离的容器所需的所有设置。
+### Frontend runtime environment
 
-## 结论
+We keep up with the latest updates to **frontend development tools**, so the CLI supports two JavaScript runtime environments: via the standard [Node.js][frontend_nodejs_url] and the new and extremely fast [Bun][frontend_bun_url] (which is backwards compatible with Node.js).
 
-综上所述，我们有信心说，无论你的代码和网页开发经验如何，你都会喜欢使用 Gowebly CLI！ :wink:
+You can choose whichever you like best for your project.
+
+### htmx & hyperscript
+
+The [htmx][frontend_htmx_url] and [hyperscript][frontend_hyperscript_url] reactive libraries are available as regular NPM packages in the `package.json` and will be added to the project "as is" in the `./assets/scripts.js` file.
+
+### Prettier
+
+Since `v2.0.0`, the **Gowebly** CLI supports the [Prettier][frontend_prettier_url] formatter to format your files.
+
+## Deploy
+
+To successfully **deploy** your project to a remote server (or in the cloud), the CLI has pre-prepared Docker files (`docker-compose.yml` and `Dockerfile`). They already contain all the settings you need to create an isolated container exactly with your project.
+
+## Conclusion
+
+All of this together gives us the confidence to say that you will enjoy working with the **Gowebly** CLI, whatever your experience in code and web development! :wink:
 
 <!--@include: ../../parts/links.md-->

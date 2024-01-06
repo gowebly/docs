@@ -1,6 +1,6 @@
-# Crear un nuevo proyecto
+# Create a new project
 
-Para iniciar un nuevo proyecto, ejecute el comando `create`:
+To start a new project, execute the `create` command:
 
 ::: code-group
 ```bash [CLI]
@@ -10,117 +10,65 @@ gowebly create
 ```bash [Go]
 go run github.com/gowebly/gowebly@latest create
 ```
-
-```bash [Docker]
-docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest create
-```
 :::
+
+And result will be:
 
 <img width="100%" alt="gowebly create" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_create.gif"/>
 
-## ¿Qué hace el CLI por ti?
-
-Cada vez que ejecutas el comando `create` para un proyecto, el CLI de **Gowebly** realiza lo siguiente en segundo plano:
-
-| Paso  | Descripción                                                                                                                                     | ¿Es asíncrono? |
-| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------- | :------------: |
-| **1** | **El CLI valida la configuración y la aplica al proyecto actual**                                                                               |       No       |
-| **2** | **El CLI genera la estructura de tu proyecto (carpetas y archivos)**                                                                            |       No       |
-| **3** | **El CLI prepara la parte backend de tu proyecto**                                                                                              |                |
-| 3.1   | El CLI genera los archivos de utilidad necesarios (`go.mod`, archivos de backend, y más)                                                        |       Sí       |
-| 3.2   | Si `template_engine` está configurado como `templ`, el CLI instala [Templ][backend_ah_templ_url] en tu sistema y ejecuta `templ generate`       |       Sí       |
-| 3.3   | El CLI ejecuta `go mod tidy`                                                                                                                    |       Sí       |
-| **4** | **El CLI prepara la parte frontend de tu proyecto**                                                                                             |                |
-| 4.1   | El CLI genera el archivo `styles.css` con estilos mínimos para el framework CSS elegido                                                         |       Sí       |
-| 4.2   | El CLI genera los archivos de utilidad necesarios (`package.json`, configuración para el framework CSS elegido, y más)                          |       Sí       |
-| 4.3   | El CLI ejecuta los scripts `install` y `build:dev` del archivo `package.json` con el entorno de ejecución de JavaScript elegido por primera vez |       Sí       |
-| **5** | **El CLI descarga las versiones minimizadas de htmx e hyperscript desde el confiable [unpkg.com][other_unpkg_url] CDN**                         |       Sí       |
-
-::: tip Pasos asíncronos
-La CLI de **Gowebly** ejecuta todos los bloques con pasos asíncronos en **goroutines** individuales. Por lo tanto, la creación de un nuevo proyecto es varias veces más rápido que si se inicia cada paso uno tras otro.
-:::
-
-## Diagrama
-
-Para visualizar el flujo de trabajo de **Gowebly** CLI, consulte el diagrama:
-
-```mermaid
-stateDiagram-v2
-    Validation: Validación de la configuración
-    Structure: Generar la estructura del proyecto
-    Backend: Preparar la parte backend
-    Frontend: Preparar la parte frontal
-    Downloading: Descarga de guiones
-    Goroutines: Goroutines individuales
-    direction LR
-    [*] --> Validation
-    Validation --> Structure
-    Structure --> Goroutines
-    state Goroutines {
-        direction LR
-        Backend
-        Frontend
-        Downloading
-    }
-    Goroutines --> [*]
-```
-
-## Estructura del proyecto después de crearlo
-
-Normalmente, tras ejecutar el comando `create`, un proyecto creado contiene los siguientes archivos y carpetas:
+Typically, the created project contains the following files and folders:
 
 ::: code-group
-```bash{21,22} [Sin motores de plantillas]
+```bash{18,19} [Using html/template]
 .
 ├── assets
-│   └── styles.css
+│   ├── scripts.js
+│   └── styles.scss
 ├── static
-│   ├── favicons
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon.ico
-│   │   ├── favicon.png
-│   │   ├── favicon.svg
-│   │   ├── manifest-desktop-screenshot.jpeg
-│   │   ├── manifest-mobile-screenshot.jpeg
-│   │   └── manifest-touch-icon.svg
 │   ├── images
-│   │   └── logo.svg
-│   ├── htmx.min.js
-│   ├── hyperscript.min.js
-│   ├── styles.css
+│   │   └── gowebly.svg
+│   ├── apple-touch-icon.png
+│   ├── favicon.ico
+│   ├── favicon.png
+│   ├── favicon.svg
+│   ├── manifest-desktop-screenshot.jpeg
+│   ├── manifest-mobile-screenshot.jpeg
+│   ├── manifest-touch-icon.svg
 │   └── manifest.json
 ├── templates
 │   ├── pages
 │   │   └── index.html
 │   └── main.html
+├── .air.toml
+├── .dockerignore
 ├── .gitignore
+├── .prettierignore
+├── docker-compose.yml
+├── Dockerfile
 ├── go.mod
 ├── go.sum
 ├── handlers.go
 ├── main.go
 ├── package.json
-├── package-lock.json
+├── prettier.config.js
 └── server.go
 ```
 
-```bash{22,24} [Utilizar Templ]
+```bash{19,21} [Using Templ]
 .
 ├── assets
-│   └── styles.css
+│   ├── scripts.js
+│   └── styles.scss
 ├── static
-│   ├── favicons
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon.ico
-│   │   ├── favicon.png
-│   │   ├── favicon.svg
-│   │   ├── manifest-desktop-screenshot.jpeg
-│   │   ├── manifest-mobile-screenshot.jpeg
-│   │   └── manifest-touch-icon.svg
 │   ├── images
-│   │   └── logo.svg
-│   ├── htmx.min.js
-│   ├── hyperscript.min.js
-│   ├── styles.css
+│   │   └── gowebly.svg
+│   ├── apple-touch-icon.png
+│   ├── favicon.ico
+│   ├── favicon.png
+│   ├── favicon.svg
+│   ├── manifest-desktop-screenshot.jpeg
+│   ├── manifest-mobile-screenshot.jpeg
+│   ├── manifest-touch-icon.svg
 │   └── manifest.json
 ├── templates
 │   ├── pages
@@ -128,19 +76,55 @@ Normalmente, tras ejecutar el comando `create`, un proyecto creado contiene los 
 │   │   └── index.templ
 │   ├── main_templ.go
 │   └── main.templ
+├── .air.toml
+├── .dockerignore
 ├── .gitignore
+├── .prettierignore
+├── docker-compose.yml
+├── Dockerfile
 ├── go.mod
 ├── go.sum
 ├── handlers.go
 ├── main.go
 ├── package.json
-├── package-lock.json
+├── prettier.config.js
 └── server.go
 ```
 :::
 
-::: danger Archivos autogenerates por Templ
-Por favor, **no** edite los archivos `*_templ.go` Go en la carpeta `./templates` de su proyecto. Son autogenerates por la CLI de **Templ** a partir de las plantillas `*.templ`.
+::: danger Auto-generated files by Templ
+Please do **not** edit `*_templ.go` Go files in the `./templates` folder of your project! They're auto-generated by the **Templ** CLI from `*.templ` templates.
 :::
+
+## What CLI does for you?
+
+Every time you execute the `create` command for a project, the **Gowebly** CLI does the following under the hood:
+
+| Step  | Description                                                                                                      |
+| :---: | ---------------------------------------------------------------------------------------------------------------- |
+| **1** | **The structure of your project**                                                                                |
+|       | CLI creates the project folders and all needed miscellaneous files                                               |
+| **2** | **The backend part of your project**                                                                             |
+|       | CLI generates the backend files (`go.mod`, chosen Go framework files, and so on)                                 |
+|       | CLI runs `go mod tidy` and `go fmt` for the first time                                                           |
+| **3** | **The frontend part of your project**                                                                            |
+|       | CLI generates the `scripts.js` file with importing the chosen reactivity library                                 |
+|       | CLI generates the `styles.scss` file with minimal styles for the chosen CSS framework                            |
+|       | CLI generates the needed utility files (`package.json`, config for the chosen CSS framework, and so on)          |
+|       | CLI runs `install` and `build` scripts from the `package.json` file with the chosen frontend runtime environment |
+
+To visualize the workflow, please refer to the diagram:
+
+```mermaid
+stateDiagram-v2
+    Structure: Generate project structure
+    Backend: Prepare backend part
+    Frontend: Prepare frontend part
+    direction LR
+    [*] --> Structure
+    Structure --> Backend
+    Backend --> Frontend
+    Frontend --> [*]
+```
 
 <!--@include: ../../parts/links.md -->

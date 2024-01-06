@@ -3,46 +3,64 @@ editLink: false
 lastUpdated: false
 ---
 
-# Как это работает?
+# How does it work?
 
-Этот раздел поможет вам понять, как работает **Gowebly** CLI.
+This section will help you understand how **Gowebly** CLI works.
 
-<!--@include: ../../parts/ru/block_want-to-try.md-->
+<!--@include: ../../parts/block_want-to-try.md-->
 
-CLI **Gowebly** построен на базе языка программирования [Go][go_url].
+The **Gowebly** CLI is built on top of the [Go][go_url] programming language.
 
-Поэтому он может успешно работать на любой поддерживаемой системе и архитектуре, как исполняемое приложение. Все шаблоны для проекта (как backend, так и frontend), которые он генерирует в результате своей работы, уже включены в этот исполняемый файл. То есть, для работы с CLI не требуется никаких дополнительных файлов.
+Therefore, it can run successfully on any supported system and architecture as an executable application. All the templates for the project (both backend and frontend) that it generates as a result of its work are already included in this executable. That is, you do not need any additional files to work with the CLI.
 
-Многие процессы, выполняемые CLI под капотом, выполняются параллельно, благодаря **горутинам**.
+## Backend part
 
-## Backend-часть
+The templates for the **backend** part of your project have been thoroughly tested and contain only the features and parameters you need to get started. You can use them as a good start and improve them as your project grows.
 
-Шаблоны для **backend**-части вашего проекта были тщательно протестированы и содержат только те функции и параметры, которые необходимы для начала работы. Вы можете использовать их в качестве начального варианта и совершенствовать по мере развития вашего проекта.
+At this moment, the CLI supported the following Go web frameworks: [Fiber][backend_fiber_url], [Gin][backend_gin_url], [Echo][backend_echo_url], [Chi][backend_chi_url] and [HttpRouter][backend_httprouter_url]. By default, created project will use the built-in [net/http][backend_net_http_url] package.
 
-На данный момент CLI поддерживает следующие Go веб-фреймворки: [Fiber][backend_fiber_url], [Gin][backend_gin_url], [Echo][backend_echo_url], [Chi][backend_chi_url] и [HttpRouter][backend_httprouter_url]. По умолчанию созданный проект будет использовать встроенный пакет [net/http][backend_net_http_url].
+### Server layer for htmx
 
-Для повышения эффективности CLI поддерживает механизм шаблонизации [Templ][backend_ah_templ_url]. С его помощью можно быстро создавать пользовательские интерфейсы для своего проекта, не покидая традиционной среды Go. Все шаблоны представляют собой обычные функции Go, без необходимости создавать дополнительные HTML-шаблоны и работать со встроенным шаблонизатором Go (из пакета `html/template`).
+The CLI uses the [htmx-go][backend_angelofallars_go_htmx_url] package, which provides a more convenient API for using the [htmx][frontend_htmx_url] server layer in the backend part of your project.
 
-## Фронтенд-часть
+::: warning Please note
+All web frameworks are supported this package, except **Fiber**. As soon as its developers provide an adapter for integration or write their own wrapper to work with.
+:::
 
-Для создания сборки для **фронтенд**-части был выбран быстрый и простой бандлер [Parcel][frontend_parcel_url] версии `2`. Это позволило максимально сократить излишне напряженный момент сборки фронтенда. Больше не нужно разбираться в конфигурациях, CLI уже все подготовил за вас.
+### Templ
 
-На данный момент CLI поддерживает следующие CSS-фреймворки: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url], [Bootstrap][frontend_bootstrap_url], [Bulma][frontend_bulma_url] и библиотеку компонентов [daisyUI][frontend_daisyui_url]. По умолчанию созданный проект будет использовать минимальные CSS-стили для демонстрации.
+To be more efficient, the CLI supports the [Templ][backend_a_h_templ_url] templating engine. With its help, you can rapidly create UIs for your project without leaving the traditional Go environment.
 
-### Среда выполнения JavaScript
+All templates are regular Go functions, without having to create additional HTML templates and deal with the built-in Go templating engine (from the `html/template` package).
 
-Мы следим за последними обновлениями **средств разработки фронтенда**, поэтому CLI поддерживает две среды выполнения JavaScript: стандартную [Node.js][frontend_nodejs_url], новую и чрезвычайно быструю [Bun][frontend_bun_url] (обратно совместимую с Node.js). В настройках CLI можно выбрать тот вариант, который больше подходит для вашего проекта.
+## Frontend part
+
+To create a build for the **frontend** part, the quick and easy [Parcel][frontend_parcel_url] bundler version `2` was chosen. This allowed us to reduce the unnecessarily stressful moment of frontend build to the maximum.
+
+No more need to understand configurations, the CLI has already prepared it for you.
+
+At this moment, the CLI supported the following CSS frameworks: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url], [Bootstrap][frontend_bootstrap_url], [Bulma][frontend_bulma_url], [daisyUI][frontend_daisyui_url] and [Flowbite][frontend_flowbite_url] components library. By default, created project will use the minimal CSS styles to demonstration.
+
+### Frontend runtime environment
+
+We keep up with the latest updates to **frontend development tools**, so the CLI supports two JavaScript runtime environments: via the standard [Node.js][frontend_nodejs_url] and the new and extremely fast [Bun][frontend_bun_url] (which is backwards compatible with Node.js).
+
+You can choose whichever you like best for your project.
 
 ### htmx & hyperscript
 
-CLI также включает HTTP-клиент, позволяющий в фоновом режиме загружать JavaScript-файлы [htmx][frontend_htmx_url] и [hyperscript][frontend_hyperscript_url] из удаленной CDN для дальнейшего использования в вашем проекте.
+The [htmx][frontend_htmx_url] and [hyperscript][frontend_hyperscript_url] reactive libraries are available as regular NPM packages in the `package.json` and will be added to the project "as is" in the `./assets/scripts.js` file.
 
-## Развертывание
+### Prettier
 
-Для успешного **развертывания** вашего проекта на удаленном сервере (или в облаке), CLI может сгенерировать заранее подготовленные Docker-файлы (`docker-compose.yml` и `Dockerfile`). В них уже содержатся все настройки, необходимые для создания изолированного контейнера именно с вашим проектом.
+Since `v2.0.0`, the **Gowebly** CLI supports the [Prettier][frontend_prettier_url] formatter to format your files.
 
-## Заключение
+## Deploy
 
-Всё это вместе взятое позволяет нам с уверенностью сказать, что вы получите удовольствие от работы с **Gowebly** CLI, каким бы ни был ваш опыт в программировании и веб-разработке! :wink:
+To successfully **deploy** your project to a remote server (or in the cloud), the CLI has pre-prepared Docker files (`docker-compose.yml` and `Dockerfile`). They already contain all the settings you need to create an isolated container exactly with your project.
+
+## Conclusion
+
+All of this together gives us the confidence to say that you will enjoy working with the **Gowebly** CLI, whatever your experience in code and web development! :wink:
 
 <!--@include: ../../parts/links.md-->

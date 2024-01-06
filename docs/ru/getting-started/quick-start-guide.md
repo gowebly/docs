@@ -1,29 +1,29 @@
-# Краткое руководство по запуску
+# Quick start guide
 
-Здесь приведен минимальный вариант действий по запуску **Gowebly** CLI.
+Here's a minimal version of the steps to run the **Gowebly** CLI.
 
-<!--@include: ../../parts/ru/block_cant-find-answer.md-->
+<!--@include: ../../parts/block_cant-find-answer.md-->
 
-Сначала [скачайте][go_download_url] и установите **Go**. Требуется версия `1.21` (или выше).
+First, [download][go_download_url] and install **Go**. Version `1.21` (or higher) is required.
 
-Запустите **Gowebly** CLI с помощью команды [`go run`][go_run_url] для создания нового проекта в текущей папке с конфигурацией [по умолчанию][repo_default_config]:
+Run the [`go run`][go_run_url] command to create a new project in the current folder:
 
 ``` bash
 go run github.com/gowebly/gowebly@latest create
 ```
 
-::: tip Преимущества команды `go run`
-С помощью команды `go run` можно использовать все возможности **Gowebly** CLI без установки в систему.
+::: tip Benefits of the `go run` command
+With `go run`, you can use all features of the **Gowebly** CLI without installation to your system.
 :::
 
-Вот и всё! :fire:
+That's it! :fire:
 
-В текущей папке создано веб-приложение. Оно будет использовать пакет **net/http** (в качестве бэкенда Go) и пакет **html/template** (в качестве шаблонизатора). Библиотеки **htmx** и **hyperscript** уже доступны в ваших HTML-шаблонах.
+A web application has been created in the current folder. It will use the **net/http** package (as a Go backend) and the **html/template** package (as a template engine). The **htmx** and **hyperscript** packages are already available in your HTML templates.
 
-## Использование готовых для установки пакетов
+## Use a ready-made packages
 
-Загрузите готовые файлы `exe` для Windows, пакеты `deb` (для Debian, Ubuntu), `rpm` (для CentOS, Fedora), `apk` (для Alpine) или Arch Linux со страницы [Releases][repo_releases_url].
+Download ready-made `exe` files for Windows, `deb` (for Debian, Ubuntu), `rpm` (for CentOS, Fedora), `apk` (for Alpine), or Arch Linux packages from the [Releases][repo_releases_url] page.
 
-Устанавливайте их, как обычно.
+Install it like you normally would.
 
 <!--@include: ../../parts/links.md-->

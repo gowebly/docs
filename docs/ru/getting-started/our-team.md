@@ -1,12 +1,15 @@
 ---
 editLink: false
 lastUpdated: false
+prev:
+  text: 'Build from the source'
+  link: '/ru/getting-started/build-from-source'
 next:
-  text: 'Полное руководство пользователя'
+  text: 'Complete user guide'
   link: '/ru/complete-user-guide'
 ---
 
-# Наша команда
+# Our team
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
@@ -20,24 +23,16 @@ const members = [
       { icon: 'github', link: 'https://github.com/koddr' },
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/koddr' }
     ]
-  },
-  {
-    avatar: 'https://www.github.com/truewebartisans.png',
-    name: 'True Web Artisans',
-    title: 'Contribution & Support',
-    links: [
-      { icon: 'github', link: 'https://github.com/truewebartisans' }
-    ]
   }
 ]
 </script>
 
-Поприветствуйте нашу замечательную команду.
+Say hello to our awesome team.
 
 <VPTeamMembers size="small" :members="members" />
 
-## Контрибьюторы
+## Contributors
 
-Наша замечательная команда постоянно растет, но мы всегда ищем новых участников!
+Our amazing team is growing, but we are always looking for new contributors!
 
 <a href="https://github.com/gowebly/gowebly/graphs/contributors" target="_blank"><img width="160" src="https://contrib.rocks/image?repo=gowebly/gowebly" alt="Gowebly contributors"/></a>

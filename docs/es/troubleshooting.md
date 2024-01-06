@@ -4,28 +4,15 @@ prev:
   link: '/es/faq'
 ---
 
-# Solución de problemas
+# Troubleshooting
 
-Las averías más comunes que pueden surgir al utilizar el **Gowebly** CLI.
+The most common malfunctions that may come up when using the **Gowebly** CLI.
 
-<!--@include: ../parts/es/block_cant-find-answer.md-->
+<!--@include: ../parts/block_cant-find-answer.md-->
 
-## Docker: La plataforma de la imagen solicitada no coincide con la plataforma host detectada
+## Port X is taken by OS
 
-La [imagen Docker][docker_gowebly_image_url] oficial de **Gowebly** sólo está disponible para GNU/Linux:
-
-- `linux/amd64`
-- `linux/arm64`
-
-Otras arquitecturas y sistemas operativos **no** son compatibles.
-
-::: tip Windows Subsystem for Linux
-Sí, **Gowebly** CLI funciona perfectamente en el [Windows Subsystem for Linux][other_wsl_url] (WSL) también, porque usa Ubuntu como distro GNU/Linux.
-:::
-
-## El puerto X está ocupado por el sistema operativo
-
-Algunos sistemas operativos pueden ocupar puertos que quieras utilizar para desarrollar y desplegar tu aplicación. Puede comprobar si un puerto está ocupado por OS ejecutando el comando:
+Some operating systems may take up ports that you want to use to develop and deploy your application. You can check if a port is taken by OS by running the command:
 
 ::: code-group
 ``` bash [GNU/Linux]
@@ -41,13 +28,45 @@ netstat -aon
 ```
 :::
 
-Para cambiar el número de puerto, sustituya la opción `port` en el archivo `.gowebly.yml` por el número de puerto que desee utilizar para el backend:
+There are two ways to change it.
 
-``` yaml{2}
-backend:
-  port: 9000
+1. Set the port number in the `BACKEND_PORT` environment variable before running:
+
+::: code-group
+``` bash [CLI]
+BACKEND_PORT=9000 gowebly run
 ```
 
-Vuelva a ejecutar su aplicación y vaya a `http://localhost:9000`.
+``` yaml{7,9} [Docker]
+# docker-compose.yml
+
+services:
+  gowebly_default:
+    # ...
+    ports:
+      - '9000:9000'
+    environment:
+      BACKEND_PORT: 9000 # same as the exposed container port
+    # ...
+
+# ...
+```
+:::
+
+2. Edit the port number in the `server.go` file:
+
+``` go{4}
+// runServer runs a new HTTP server with the loaded environment variables.
+func runServer() error {
+	// Validate environment variables.
+	port, err := strconv.Atoi(gowebly.Getenv("BACKEND_PORT", "9000"))
+	if err != nil {
+		return err
+	}
+
+	// ...
+```
+
+Now, you can open your browser and go to the `http://localhost:9000`.
 
 <!--@include: ../parts/links.md-->

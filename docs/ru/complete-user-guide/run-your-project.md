@@ -1,6 +1,12 @@
-# Запуск проекта
+---
+next:
+  text: 'FAQ'
+  link: '/ru/faq'
+---
 
-Чтобы запустить проект в режиме разработки, выполните команду `run`:
+# Run your project
+
+To run your project in a development mode, execute the `run` command:
 
 ::: code-group
 ```bash [CLI]
@@ -10,57 +16,37 @@ gowebly run
 ```bash [Go]
 go run github.com/gowebly/gowebly@latest run
 ```
-
-```bash [Docker]
-docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest run
-```
 :::
 
-<!--@include: ../../parts/ru/block_default_config.md -->
+## What CLI does for you?
 
-<img width="720" alt="gowebly run" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_run.png">
+Every time you execute the `run` command for a project, the **Gowebly** CLI does the following under the hood:
 
-## Что делает CLI для вас?
+| Step  | Description                                                                           |
+| :---: | ------------------------------------------------------------------------------------- |
+| **1** | **Start Air tool**                                                                    |
+|       | CLI runs your project with live-reloading mode in a simple `air -c .air.toml` command |
+| **2** | **Live-reloading mode**                                                               |
+|       | Air tool builds frontend part of your project in production mode                      |
+|       | Air tool generates Go functions from `*.templ` templates, if needed                   |
+|       | Air tool builds the backend part of your project                                      |
+|       | Air tool watches for changes in your project files and rebuilds them                  |
 
-Каждый раз, когда вы запускаете команду `run` для проекта, **Gowebly** CLI выполняет следующие действия:
-
-| Шаг   | Описание                                                                                                    | Асинхронно? |
-| ----- | ----------------------------------------------------------------------------------------------------------- | :---------: |
-| **1** | **CLI проверяет и применяет конфигурацию к текущему проекту**                                               |     Нет     |
-| **2** | **CLI подготавливает backend-часть вашего проекта**                                                         |             |
-| 2.1   | Если `template_engine` установлен в `templ`, CLI выполняет `templ generate` с опцией `--watch`              |     Да      |
-| **3** | **CLI подготавливает frontend-часть вашего проекта**                                                        |             |
-| 3.1   | CLI выполняет скрипт `watch` из файла `package.json` с выбранной средой выполнения JavaScript               |     Да      |
-| **4** | **CLI скачивает минимизированные версии htmx и hyperscript с доверенного CDN [unpkg.com][other_unpkg_url]** |     Да      |
-| **5** | **CLI запускает ваш проект с помощью простой команды `go run` и показывает HTTP-логи в терминале**          |     Нет     |
-
-::: tip Асинхронные шаги
-В **Gowebly** CLI все блоки с асинхронными шагами запускаются в отдельных **горутинах**. Таким образом, подготовка к запуску проекта происходит в несколько раз быстрее, чем если бы вы запускали каждый шаг по очереди.
-:::
-
-## Диаграмма
-
-Для визуализации рабочего процесса **Gowebly** CLI приведена диаграмма:
+To visualize the workflow, please refer to the diagram:
 
 ```mermaid
 stateDiagram-v2
-    Validation: Проверка конфигурации
-    Backend: Подготовка бэкенда
-    Frontend: Подготовка фронтенда
-    Downloading: Загрузка скриптов
-    Goroutines: Индивидуальные горутины
-    Run: Запуск проекта
+    Backend: Prepare backend part
+    Frontend: Prepare frontend part
+    Watch: Watch for changes
+    Changes: Changes occurred
     direction LR
-    [*] --> Validation
-    Validation --> Goroutines
-    state Goroutines {
-        direction LR
-        Backend
-        Frontend
-        Downloading
+    Watch --> Changes
+    state Changes {
+      direction LR
+      Frontend --> Backend
     }
-    Goroutines --> Run
-    Run --> [*]
+    Changes --> Watch
 ```
 
 <!--@include: ../../parts/links.md -->

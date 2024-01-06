@@ -1,37 +1,33 @@
-# Construir desde el código fuente
+---
+next:
+  text: 'Nuestro equipo'
+  link: '/es/getting-started/our-team'
+---
 
-Los fundamentos para construir el proyecto **Gowebly** en modo manual están cubiertos en esta sección.
+# Build from the source
 
-## Clonar repositorio
+The basics for building the **Gowebly** project in manual mode are covered in this section.
 
-Clone el repositorio y vaya a la carpeta `./gowebly`:
+## Clone repository
+
+Clone the repository and go to the `./gowebly` folder:
 
 ``` bash
 git clone https://github.com/gowebly/gowebly && cd gowebly
 ```
 
-## Construir el binario Go
+## Build Go binary
 
-Edita todo lo que necesites en el código fuente y ejecuta el comando `go build` desde la carpeta raíz del proyecto para construir el binario:
-
-``` bash
-go build .
-```
-
-Ahora puedes ejecutar tu propio binario con **Gowebly** CLI.
-
-## Crear imagen Docker
-
-::: danger Dockerfile
-Como estamos utilizando la herramienta [GoReleaser][other_goreleaser_url] en nuestro pipeline, necesitas crear tu propio archivo `Dockerfile` en la raíz del repositorio para crear una imagen Docker.
-:::
-
-Edita todo lo que necesites en el código fuente y construye la imagen Docker:
+Edit everything you need in the source code and run the `go build` command from the project's root folder to build the binary:
 
 ``` bash
-docker build -t my-gowebly-image:latest .
+go build -o ./bin/my_gowebly
 ```
 
-Ahora puedes usar tu propia imagen Docker para ejecutar un contenedor con **Gowebly** CLI.
+And now, you can use your own binary with **Gowebly** CLI:
+
+``` bash
+./bin/my_gowebly [COMMAND]
+```
 
 <!--@include: ../../parts/links.md-->

@@ -70,7 +70,7 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: 'Установка', link: '/ru/complete-user-guide/installation' },
-                { text: 'Info about your system', link: '/ru/complete-user-guide/info-about-system' },
+                { text: 'Информация о вашей системе', link: '/ru/complete-user-guide/info-about-system' },
                 { text: 'Создание нового проекта', link: '/ru/complete-user-guide/create-new-project' },
                 { text: 'Запуск проекта', link: '/ru/complete-user-guide/run-your-project' },
               ]
@@ -132,7 +132,7 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: '安装', link: '/zh_HK/complete-user-guide/installation' },
-                { text: 'Info about your system', link: '/zh_HK/complete-user-guide/info-about-system' },
+                { text: '系统信息', link: '/zh_HK/complete-user-guide/info-about-system' },
                 { text: '创建新项目', link: '/zh_HK/complete-user-guide/create-new-project' },
                 { text: '运行项目', link: '/zh_HK/complete-user-guide/run-your-project' },
               ]
@@ -194,7 +194,7 @@ const userConfig: UserConfig = {
               collapsed: false,
               items: [
                 { text: 'Instalación', link: '/es/complete-user-guide/installation' },
-                { text: 'Info about your system', link: '/es/complete-user-guide/info-about-system' },
+                { text: 'Información sobre su sistema', link: '/es/complete-user-guide/info-about-system' },
                 { text: 'Crear un nuevo proyecto', link: '/es/complete-user-guide/create-new-project' },
                 { text: 'Ejecute su proyecto', link: '/es/complete-user-guide/run-your-project' },
               ]

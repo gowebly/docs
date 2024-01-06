@@ -1,29 +1,29 @@
-# Guía de inicio rápido
+# Quick start guide
 
-Aquí tienes una versión mínima de los pasos para ejecutar la CLI de **Gowebly**.
+Here's a minimal version of the steps to run the **Gowebly** CLI.
 
-<!--@include: ../../parts/es/block_cant-find-answer.md-->
+<!--@include: ../../parts/block_cant-find-answer.md-->
 
-Primero, [descarga][go_download_url] e instala **Go**. Se requiere la versión `1.21` (o superior).
+First, [download][go_download_url] and install **Go**. Version `1.21` (or higher) is required.
 
-Ejecuta la CLI de **Gowebly** usando el comando [`go run`][go_run_url] para crear un nuevo proyecto en la carpeta actual con la configuración [default][repo_default_config]:
+Run the [`go run`][go_run_url] command to create a new project in the current folder:
 
 ``` bash
 go run github.com/gowebly/gowebly@latest create
 ```
 
-::: tip Ventajas del comando `go run`
-Con `go run`, puedes utilizar todas las funciones de la CLI de **Gowebly** sin necesidad de instalarla en tu sistema.
+::: tip Benefits of the `go run` command
+With `go run`, you can use all features of the **Gowebly** CLI without installation to your system.
 :::
 
-¡Eso es! :fire:
+That's it! :fire:
 
-Se ha creado una aplicación web en la carpeta actual. Utilizará el paquete **net/http** (como backend Go) y el paquete **html/template** (como motor de plantillas). Los paquetes **htmx** y **hyperscript** ya están disponibles en sus plantillas HTML.
+A web application has been created in the current folder. It will use the **net/http** package (as a Go backend) and the **html/template** package (as a template engine). The **htmx** and **hyperscript** packages are already available in your HTML templates.
 
-## Utilizar paquetes ya preparados
+## Use a ready-made packages
 
-Descargue archivos `exe` para Windows, `deb` (para Debian, Ubuntu), `rpm` (para CentOS, Fedora), `apk` (para Alpine), o paquetes Arch Linux desde la página [Releases][repo_releases_url].
+Download ready-made `exe` files for Windows, `deb` (for Debian, Ubuntu), `rpm` (for CentOS, Fedora), `apk` (for Alpine), or Arch Linux packages from the [Releases][repo_releases_url] page.
 
-Instalado como lo harías normalmente.
+Install it like you normally would.
 
 <!--@include: ../../parts/links.md-->

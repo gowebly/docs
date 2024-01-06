@@ -1,37 +1,33 @@
-# Сборка из исходного кода
+---
+next:
+  text: 'Наша команда'
+  link: '/ru/getting-started/our-team'
+---
 
-Основы сборки проекта **Gowebly** в ручном режиме описаны в этом разделе.
+# Build from the source
 
-## Клонирование репозитория
+The basics for building the **Gowebly** project in manual mode are covered in this section.
 
-Клонируйте репозиторий и перейдите в папку `./gowebly`:
+## Clone repository
 
-```bash
+Clone the repository and go to the `./gowebly` folder:
+
+``` bash
 git clone https://github.com/gowebly/gowebly && cd gowebly
 ```
 
-## Сборка бинарного файла
+## Build Go binary
 
-Отредактируйте все необходимое в исходном коде и запустите команду `go build` из корневой папки проекта для сборки бинарного файла:
+Edit everything you need in the source code and run the `go build` command from the project's root folder to build the binary:
 
-```bash
-go build .
+``` bash
+go build -o ./bin/my_gowebly
 ```
 
-Теперь можно запускать собственную версию **Gowebly** CLI из двоичного файла.
+And now, you can use your own binary with **Gowebly** CLI:
 
-## Создание Docker-образа
-
-::: danger Dockerfile
-Поскольку в нашем конвейере используется инструмент [GoReleaser][other_goreleaser_url], для создания Docker-образа необходимо создать собственный файл `Dockerfile` в корне репозитория.
-:::
-
-Отредактируйте все необходимое в исходном коде и соберите Docker-образ:
-
-```bash
-docker build -t my-gowebly-image:latest .
+``` bash
+./bin/my_gowebly [COMMAND]
 ```
 
-Теперь вы можете использовать собственный Docker-образ для запуска контейнера с **Gowebly** CLI.
-
-<!--@include: ../parts/links.md-->
+<!--@include: ../../parts/links.md-->

@@ -1,49 +1,37 @@
-# Установка
+# Installation
 
-В этом разделе рассматриваются основы установки **Gowebly** CLI на вашу систему.
+The basics for installing the **Gowebly** CLI on your system are covered in this section.
 
 ## Go
 
-[Скачайте][go_download_url] и установите **Go**. Требуется версия `1.21` (или выше).
+[Download][go_download_url] and install **Go**. Version `1.21` (or higher) is required.
 
-Затем воспользуйтесь командой [`go install`][go_install_url]:
+Then, use the [`go install`][go_install_url] command:
 
 ``` bash
 go install github.com/gowebly/gowebly@latest
 ```
 
-## Docker
-
-Вы можете использовать **Gowebly** CLI с помощью нашего [официального Docker-образа][docker_gowebly_image_url] и запускать его в контейнере:
-
-``` bash
-docker pull gowebly/gowebly:latest
-```
-
-::: danger Ограничения Docker-образа
-Данный Docker-образ работает **только** на системах GNU/Linux (`amd64` или `arm64`, включая WSL).
-:::
-
 ## Homebrew
 
-Пользователям GNU/Linux и Apple macOS доступен способ установки **Gowebly** CLI с помощью [Homebrew][other_brew_url].
+GNU/Linux and Apple macOS users available way to install **Gowebly** CLI via [Homebrew][other_brew_url].
 
-Тапните новую формулу:
+Tap a new formula:
 
 ``` bash
 brew tap gowebly/tap
 ```
 
-Установите:
+Install:
 
 ``` bash
 brew install gowebly/tap/gowebly
 ```
 
-## Ручной режим
+## Manual mode
 
-Загрузите готовые файлы `exe` для Windows, пакеты `deb` (для Debian, Ubuntu), `rpm` (для CentOS, Fedora), `apk` (для Alpine) или Arch Linux со страницы [Releases][repo_releases_url].
+Download ready-made `exe` files for Windows, `deb` (for Debian, Ubuntu), `rpm` (for CentOS, Fedora), `apk` (for Alpine), or Arch Linux packages from the [Releases][repo_releases_url] page.
 
-Устанавливайте их, как обычно.
+Install it like you normally would.
 
 <!--@include: ../../parts/links.md-->

@@ -1,18 +1,21 @@
 ---
+prev:
+  text: 'Complete user guide'
+  link: '/ru/complete-user-guide'
 next:
-  text: 'Устранение неполадок'
+  text: 'Troubleshooting'
   link: '/ru/troubleshooting'
 ---
 
-# Вопросы и ответы
+# FAQ
 
-В этом разделе собраны наиболее распространенные вопросы, которые могут возникнуть при использовании **Gowebly** CLI.
+The most common questions that may come up when using the **Gowebly** CLI are collected in this section.
 
-<!--@include: ../parts/ru/block_cant-find-answer.md-->
+<!--@include: ../parts/block_cant-find-answer.md-->
 
-## Как правильно задать вопрос или сообщить об ошибке?
+## What is the right way to ask a question or report a bug?
 
-Запуская команду `doctor`, вы получите список всех инструментов, необходимых для работы CLI, которые установлены в вашей системе:
+Running the `doctor` command will give you a list of all the tools you need to work properly with the **Gowebly** CLI that are installed on your system:
 
 ::: code-group
 ``` bash [CLI]
@@ -22,57 +25,31 @@ gowebly doctor
 ``` bash [Go]
 go run github.com/gowebly/gowebly@latest doctor
 ```
-
-``` bash [Docker]
-docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest doctor
-```
 :::
 
-Теперь откройте [GitHub Issues][repo_issues_url] и следуйте инструкциям.
+Next, open [GitHub Issues][repo_issues_url] and follow the instructions.
 
-::: warning Результаты выполнения команды `doctor`
-Не забудьте включить вывод команды `doctor` в описание проблемы! Это очень полезная информация для отладки.
+::: warning Output of the `doctor` command
+Don't forget to include output of the `doctor` command to the issue description! This is a very helpful information for the debugging process.
 :::
 
-## Как изменить конфигурацию по умолчанию?
+## Is it possible to see a demonstration of how the CLI works without installation?
 
-Конфигурацию по умолчанию можно изменить в файле `.gowebly.yml`.
+Yes, of course! :smile: To give you a visual understanding of the project, we have recorded a short demonstration GIF for `gowebly create` command:
 
-Создайте файл `.gowebly.yml` в корне вашего проекта:
+<img width="100%" alt="gowebly create" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_create.gif"/>
 
-::: code-group
-``` bash [CLI]
-gowebly init
-```
+## Where else can I read something about the CLI?
 
-``` bash [Go]
-go run github.com/gowebly/gowebly@latest init
-```
-
-``` bash [Docker]
-docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} gowebly/gowebly:latest init
-```
-:::
-
-Измените настройки в соответствии с вашими потребностями и запустите команду `create`, `run` или `build` как обычно.
-
-## Можно ли увидеть демонстрацию работы CLI без установки?
-
-Да, конечно! :smile: Чтобы дать вам наглядное представление о проекте, мы записали короткий демонстрационный ролик на YouTube:
-
-<iframe width="100%" height="380" src="https://www.youtube-nocookie.com/embed/qazYscnLku4?si=GQSiQS0Aaib-T6zD&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-## Где еще можно прочитать что-нибудь о CLI?
-
-Мы подготовили статьи, демонстрирующие основные возможности и основные обновления:
+We prepared articles demonstrating the main features and the major updates:
 
 - [A next-generation CLI tool for building amazing web apps in Go using htmx & hyperscript][article_devto_article_1_url]
 - [Big update: the Gowebly CLI now supports Templ][article_devto_article_2_url]
 - [Frontend update: the Gowebly CLI now supports daisyUI components library][article_devto_article_3_url]
 - [Big frontend update: the Gowebly CLI now supports Bootstrap and Bulma][article_devto_article_4_url]
 
-::: tip Хотите увидеть свою статью здесь?
-Если вы хотите увидеть свою статью здесь, не стесняйтесь отправить [PR][repo_docs_pr_url] в репозиторий **Gowebly** Docs.
+::: tip Want to see your article here?
+If you want to see your article here, feel free to send a [PR][repo_docs_pr_url] to the **Gowebly** Docs repository.
 :::
 
 <!--@include: ../parts/links.md-->

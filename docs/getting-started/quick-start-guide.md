@@ -6,7 +6,7 @@ Here's a minimal version of the steps to run the **Gowebly** CLI.
 
 First, [download][go_download_url] and install **Go**. Version `1.21` (or higher) is required.
 
-Run the **Gowebly** CLI using the [`go run`][go_run_url] command to create a new project in the current folder with the [default][repo_default_config] configuration:
+Run the [`go run`][go_run_url] command to create a new project in the current folder:
 
 ``` bash
 go run github.com/gowebly/gowebly@latest create

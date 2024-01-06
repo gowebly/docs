@@ -1,37 +1,33 @@
-# 从源代码构建
+---
+next:
+  text: '我们的团队'
+  link: '/zh_HK/getting-started/our-team'
+---
 
-本节将介绍在手动模式下构建 Gowebly 项目的基础知识。
+# Build from the source
 
-## 克隆版本库
+The basics for building the **Gowebly** project in manual mode are covered in this section.
 
-克隆版本库并转到 `./gowebly` 文件夹：
+## Clone repository
+
+Clone the repository and go to the `./gowebly` folder:
 
 ``` bash
 git clone https://github.com/gowebly/gowebly && cd gowebly
 ```
 
-## 构建 Go 二进制文件
+## Build Go binary
 
-编辑源代码中所有需要的内容，然后在项目根目录下运行 `go build` 命令来构建二进制文件：
-
-``` bash
-go build .
-```
-
-现在，你可以使用 Gowebly CLI 运行自己的二进制文件。
-
-## 创建 Docker 映像
-
-::: danger Dockerfile
-由于我们在管道中使用的是 [GoReleaser][other_goreleaser_url] 工具，因此需要在版本库根目录下创建自己的 `Dockerfile` 文件，以创建 Docker 镜像。
-:::
-
-编辑源代码中的所有内容，并构建 Docker 镜像：
+Edit everything you need in the source code and run the `go build` command from the project's root folder to build the binary:
 
 ``` bash
-docker build -t my-gowebly-image:latest .
+go build -o ./bin/my_gowebly
 ```
 
-现在，你可以使用自己的 Docker 镜像，通过 Gowebly CLI 运行容器。
+And now, you can use your own binary with **Gowebly** CLI:
+
+``` bash
+./bin/my_gowebly [COMMAND]
+```
 
 <!--@include: ../../parts/links.md-->

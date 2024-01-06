@@ -3,25 +3,25 @@ editLink: false
 lastUpdated: false
 ---
 
-# 什么是 Gowebly CLI？
+# What is Gowebly CLI?
 
-本节将帮助您了解什么是 Gowebly CLI。
+This section will help you understand what **Gowebly** CLI is.
 
-<!--@include: ../parts/zh_HK/block_want-to-try.md-->
+<!--@include: ../parts/block_want-to-try.md-->
 
-Gowebly CLI 是一款免费开源软件，可帮助您在后端使用 Go，在前端使用 htmx 和 hyperscript 以及最流行的原子/实用优先 CSS 框架，轻松构建令人惊叹的网络应用程序。
+The **Gowebly** CLI is a free and open source software that helps to easily build amazing web applications with Go on the backend, using htmx & hyperscript and the most popular CSS frameworks on the frontend.
 
-CLI 可生成一个即用型项目，帮助开发人员尽快了解 Go + htmx + hyperscript + CSS 框架技术栈，并以最舒适的方式开始工作。许多项目元素已经过优化配置，可以随时使用。
+CLI generates a ready-to-use project that helps to understand **Go** + **htmx** technology stack as quickly as possible and start working on it with maximum developer comfort. Many project elements are already optimally configured and ready for production.
 
-下图更清楚地说明了这一点：
+To visualize the workflow, please refer to the diagram:
 
 ```mermaid
 stateDiagram-v2
     direction LR
-        Install: 安装 CLI
-        Doctor: 查看诊断
-        Create: 创建新项目
-        Run: 运行项目
+        Install: Install CLI
+        Doctor: View diagnostics
+        Create: Create new project
+        Run: Run project
         [*] --> Install
         Install --> Create
         Install --> Doctor

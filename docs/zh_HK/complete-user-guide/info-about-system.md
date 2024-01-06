@@ -33,4 +33,4 @@ And result will be:
 ✱ For more information go to the official docs: https://gowebly.org
 ```
 
-<!--@include: ../parts/links.md -->
+<!--@include: ../../parts/links.md -->
