@@ -9,7 +9,7 @@ The basics for installing the **Gowebly** CLI on your system are covered in this
 Then, use the [`go install`][go_install_url] command:
 
 ``` bash
-go install github.com/gowebly/gowebly@latest
+go install github.com/gowebly/gowebly/v2@latest
 ```
 
 ## Homebrew

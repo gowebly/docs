@@ -31,6 +31,7 @@
 
 [frontend_htmx_url]: https://htmx.org
 [frontend_hyperscript_url]: https://hyperscript.org
+[frontend_alpinejs_url]: https://alpinejs.dev
 [frontend_tailwindcss_url]: https://tailwindcss.com
 [frontend_daisyui_url]: https://daisyui.com
 [frontend_flowbite_url]: https://flowbite.com

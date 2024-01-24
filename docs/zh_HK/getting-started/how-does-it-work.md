@@ -47,9 +47,9 @@ We keep up with the latest updates to **frontend development tools**, so the CLI
 
 You can choose whichever you like best for your project.
 
-### htmx & hyperscript
+### htmx, hyperscript and Alpine.js
 
-The [htmx][frontend_htmx_url] and [hyperscript][frontend_hyperscript_url] reactive libraries are available as regular NPM packages in the `package.json` and will be added to the project "as is" in the `./assets/scripts.js` file.
+The [htmx][frontend_htmx_url], [hyperscript][frontend_hyperscript_url] and [Alpine.js][frontend_alpinejs_url] reactive libraries are available as regular NPM packages in the `package.json` and will be added to the project "as is" in the `./assets/scripts.js` file.
 
 ### Prettier
 

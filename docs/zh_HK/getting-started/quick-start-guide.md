@@ -9,7 +9,7 @@ First, [download][go_download_url] and install **Go**. Version `1.21` (or higher
 Run the [`go run`][go_run_url] command to create a new project in the current folder:
 
 ``` bash
-go run github.com/gowebly/gowebly@latest create
+go run github.com/gowebly/gowebly/v2@latest create
 ```
 
 ::: tip Benefits of the `go run` command
