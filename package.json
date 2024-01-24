@@ -9,10 +9,10 @@
     "preview": "vitepress preview docs"
   },
   "dependencies": {
-    "mermaid": "^10.6.1",
-    "vitepress": "^1.0.0-rc.36",
+    "mermaid": "^10.7.0",
+    "vitepress": "^1.0.0-rc.40",
     "vitepress-plugin-mermaid": "^2.0.16",
-    "vue": "^3.4.8"
+    "vue": "^3.4.15"
   },
   "devDependencies": {
     "typescript": "^5.3.3"
