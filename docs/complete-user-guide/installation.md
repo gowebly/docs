@@ -4,7 +4,7 @@ The basics for installing the **Gowebly** CLI on your system are covered in this
 
 ## Go
 
-[Download][go_download_url] and install **Go**. Version `1.21` (or higher) is required.
+[Download][go_download_url] and install **Go**. Version `1.22` (or higher) is required.
 
 Then, use the [`go install`][go_install_url] command:
 

@@ -7,7 +7,7 @@ lastUpdated: false
 
 This section will help you understand how **Gowebly** CLI works.
 
-<!--@include: ../../parts/block_want-to-try.md-->
+<!--@include: ../../parts/zh_HK/block_want-to-try.md-->
 
 The **Gowebly** CLI is built on top of the [Go][go_url] programming language.
 
@@ -33,6 +33,10 @@ To be more efficient, the CLI supports the [Templ][backend_a_h_templ_url] templa
 
 All templates are regular Go functions, without having to create additional HTML templates and deal with the built-in Go templating engine (from the `html/template` package).
 
+### Linter for Go code
+
+To make the code cleaner, we give the option to generate the [golangci-lint][backend_golangci_lint_url] configuration file with recommended settings. This is optional, but highly recommended.
+
 ## Frontend part
 
 To create a build for the **frontend** part, the quick and easy [Parcel][frontend_parcel_url] bundler version `2` was chosen. This allowed us to reduce the unnecessarily stressful moment of frontend build to the maximum.
@@ -54,6 +58,10 @@ The [htmx][frontend_htmx_url], [hyperscript][frontend_hyperscript_url] and [Alpi
 ### Prettier
 
 Since `v2.0.0`, the **Gowebly** CLI supports the [Prettier][frontend_prettier_url] formatter to format your files.
+
+## Live-reload
+
+The **Gowebly** CLI supports the **live-reload** feature by the [Air][backend_air_url] tool. This works the same for both backend Go files and frontend files (JavaScript, CSS and so on).
 
 ## Deploy
 

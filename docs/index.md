@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Gowebly
   text: A next-generation CLI tool for build amazing web apps.
-  tagline: Go, htmx & hyperscript, modern CSS frameworks!
+  tagline: Go, htmx, modern CSS frameworks!
   image:
     src: /gowebly-logo.svg
     alt: "gowebly logo"

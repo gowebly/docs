@@ -7,7 +7,7 @@ lastUpdated: false
 
 This section will help you understand what **Gowebly** CLI is.
 
-<!--@include: ../../parts/block_want-to-try.md-->
+<!--@include: ../parts/es/block_want-to-try.md-->
 
 The **Gowebly** CLI is a free and open source software that helps to easily build amazing web applications with Go on the backend, using htmx & hyperscript and the most popular CSS frameworks on the frontend.
 

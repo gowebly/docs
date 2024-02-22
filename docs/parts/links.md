@@ -26,6 +26,8 @@
 [backend_httprouter_url]: https://github.com/julienschmidt/httprouter
 [backend_a_h_templ_url]: https://github.com/a-h/templ
 [backend_angelofallars_go_htmx_url]: https://github.com/angelofallars/htmx-go
+[backend_golangci_lint_url]: https://github.com/golangci/golangci-lint
+[backend_air_url]: https://github.com/cosmtrek/air
 
 <!-- Frontend links -->
 

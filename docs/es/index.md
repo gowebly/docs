@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Gowebly
   text: Una herramienta CLI de última generación para crear aplicaciones web increíbles.
-  tagline: Go, htmx & hyperscript, ¡marcos CSS modernos!
+  tagline: Go, htmx, ¡marcos CSS modernos!
   image:
     src: /gowebly-logo.svg
     alt: "gowebly logo"

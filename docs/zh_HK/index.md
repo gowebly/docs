@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Gowebly
   text: 下一代 CLI 工具，用于构建令人惊叹的网络应用程序。
-  tagline: Go、htmx 和 hyperscript、现代 CSS 框架！
+  tagline: Go、htmx、现代 CSS 框架！
   image:
     src: /gowebly-logo.svg
     alt: "gowebly logo"

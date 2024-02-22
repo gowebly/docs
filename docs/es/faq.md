@@ -11,7 +11,7 @@ next:
 
 The most common questions that may come up when using the **Gowebly** CLI are collected in this section.
 
-<!--@include: ../parts/block_cant-find-answer.md-->
+<!--@include: ../parts/es/block_cant-find-answer.md-->
 
 ## What is the right way to ask a question or report a bug?
 
