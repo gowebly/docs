@@ -20,11 +20,11 @@ And result will be:
 │
 │ Copy this information to paste into an issue ↘
 │
-│ Gowebly CLI: v2.0.1 (build with go1.21.5 on darwin/arm64)
+│ Gowebly CLI: v2.3.3 (build with go1.22.1 on darwin/arm64)
 │
-│ Go: 1.21.5 darwin/arm64
-│ Node.js version: 21.5.0 (npm 10.2.4)
-│ Bun version: 1.0.21
+│ Go: 1.22.1 darwin/arm64
+│ Node.js version: 21.7.1 (npm 10.5.0)
+│ Bun version: 1.0.35
 │
 │ Is Air tool installed? true
 │ Is Templ package installed? true

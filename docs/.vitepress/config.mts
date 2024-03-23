@@ -4,8 +4,8 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 // Define user configuration.
 const userConfig: UserConfig = {
   title: 'Gowebly',
-  titleTemplate: 'A next-generation CLI tool for easily build amazing web apps with Go, htmx & hyperscript ~ Gowebly',
-  description: 'A next-generation CLI tool for easily build amazing web applications with Go on the backend, using htmx & hyperscript and the most popular atomic/utility-first CSS frameworks on the frontend.',
+  titleTemplate: 'A next-generation CLI tool for easily build amazing web apps with Go, Templ, htmx, hyperscript or Alpine.js and CSS frameworks ~ Gowebly',
+  description: 'A next-generation CLI tool that makes it easy to create amazing web applications with Go on the backend, using htmx, hyperscript or Alpine.js and the most popular CSS frameworks on the frontend.',
   lastUpdated: true,
   cleanUrls: true,
   mermaid: {

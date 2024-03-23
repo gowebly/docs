@@ -18,6 +18,17 @@ And result will be:
 
 Typically, the created project contains the following files and folders:
 
+- The templates are located in the `./templates` folder.
+- The main CSS file `styles.scss` is located in the `./assets` folder.
+- The main JavaScript file `scripts.js` is located in the `./assets` folder.
+- The PWA manifest file `manifest.json` and images are located in the `./static` folder.
+
+::: warning Go structure disclaimer
+Please note, that the **Gowebly** does not impose any restrictions on the architecture, style or structure of your project. The CLI only helps you **quickly start a new project** and generates all the necessary files for you.
+
+Therefore, you are **free to create** any project structure you wish.
+:::
+
 ::: code-group
 ```bash{18,19} [Using html/template]
 .
