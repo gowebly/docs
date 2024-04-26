@@ -58,6 +58,7 @@
 [article_devto_article_3_url]: https://dev.to/koddr/frontend-update-the-gowebly-cli-now-supports-daisyui-components-library-3dmn
 [article_devto_article_4_url]: https://dev.to/koddr/big-frontend-update-the-gowebly-cli-now-supports-bootstrap-and-bulma-1c45
 [article_devto_article_5_url]: https://dev.to/koddr/the-gowebly-cli-has-grown-to-v200-d1c
+[article_devto_article_6_url]: https://dev.to/koddr/preline-ui-gowebly-cli--2928
 [article_cloudflare_timeouts_url]: https://blog.cloudflare.com/the-complete-guide-to-golang-net-http-timeouts/
 
 <!-- Other links -->

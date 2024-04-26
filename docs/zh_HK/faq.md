@@ -48,6 +48,7 @@ We prepared articles demonstrating the main features and the major updates:
 - [Frontend update: the Gowebly CLI now supports daisyUI components library][article_devto_article_3_url]
 - [Big frontend update: the Gowebly CLI now supports Bootstrap and Bulma][article_devto_article_4_url]
 - [The Gowebly CLI has grown to v2.0.0][article_devto_article_5_url]
+- [Preline UI + Gowebly CLI = ❤️][article_devto_article_6_url]
 
 ::: tip Want to see your article here?
 If you want to see your article here, feel free to send a [PR][repo_docs_pr_url] to the **Gowebly** Docs repository.
