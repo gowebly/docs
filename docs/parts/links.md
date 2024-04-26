@@ -37,6 +37,7 @@
 [frontend_tailwindcss_url]: https://tailwindcss.com
 [frontend_daisyui_url]: https://daisyui.com
 [frontend_flowbite_url]: https://flowbite.com
+[frontend_prelineui_url]: https://preline.co
 [frontend_unocss_url]: https://unocss.dev
 [frontend_bootstrap_url]: https://getbootstrap.com
 [frontend_bulma_url]: https://bulma.io

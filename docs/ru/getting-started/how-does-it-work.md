@@ -43,7 +43,7 @@ To create a build for the **frontend** part, the quick and easy [Parcel][fronten
 
 No more need to understand configurations, the CLI has already prepared it for you.
 
-At this moment, the CLI supported the following CSS frameworks: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url], [Bootstrap][frontend_bootstrap_url], [Bulma][frontend_bulma_url], [daisyUI][frontend_daisyui_url] and [Flowbite][frontend_flowbite_url] components library. By default, created project will use the minimal CSS styles to demonstration.
+At this moment, the CLI supported the following CSS frameworks: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url], [Bootstrap][frontend_bootstrap_url], [Bulma][frontend_bulma_url], [daisyUI][frontend_daisyui_url], [Flowbite][frontend_flowbite_url] and [Preline UI][frontend_prelineui_url] components library. By default, created project will use the minimal CSS styles to demonstration.
 
 ### Frontend runtime environment
 
