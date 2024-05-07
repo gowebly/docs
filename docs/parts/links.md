@@ -5,7 +5,6 @@
 [repo_discussions_url]: https://github.com/gowebly/gowebly/discussions
 [repo_docs_url]: https://github.com/gowebly/docs
 [repo_docs_pr_url]: https://github.com/gowebly/docs/pulls
-
 [repo_license_url]: https://github.com/gowebly/gowebly/blob/main/LICENSE
 
 <!-- Go links -->
@@ -24,6 +23,7 @@
 [backend_echo_url]: https://github.com/labstack/echo
 [backend_chi_url]: https://github.com/go-chi/chi
 [backend_httprouter_url]: https://github.com/julienschmidt/httprouter
+[backend_pocketbase_url]: https://github.com/pocketbase/pocketbase
 [backend_a_h_templ_url]: https://github.com/a-h/templ
 [backend_angelofallars_go_htmx_url]: https://github.com/angelofallars/htmx-go
 [backend_golangci_lint_url]: https://github.com/golangci/golangci-lint
