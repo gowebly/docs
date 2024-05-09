@@ -14,7 +14,7 @@ gowebly run
 ```
 
 ```bash [Go]
-go run github.com/gowebly/gowebly@latest run
+go run github.com/gowebly/gowebly/v2@latest run
 ```
 :::
 
