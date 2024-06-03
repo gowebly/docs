@@ -3,25 +3,25 @@ editLink: false
 lastUpdated: false
 ---
 
-# What is Gowebly CLI?
+# ¿Qué es Gowebly CLI?
 
-This section will help you understand what **Gowebly** CLI is.
+Esta sección te ayudará a entender qué es **Gowebly** CLI.
 
 <!--@include: ../parts/es/block_want-to-try.md-->
 
-The **Gowebly** CLI is a free and open source software that helps to easily build amazing web applications with Go on the backend, using htmx & hyperscript and the most popular CSS frameworks on the frontend.
+La CLI de **Gowebly** es un software de código abierto y gratuito que ayuda a construir fácilmente aplicaciones web increíbles con Go en el backend, utilizando htmx & hyperscript y los más populares frameworks de CSS en el frontend.
 
-CLI generates a ready-to-use project that helps to understand **Go** + **htmx** technology stack as quickly as possible and start working on it with maximum developer comfort. Many project elements are already optimally configured and ready for production.
+Con esta CLI pudes generar un proyecto listo para usar que te ayuda a entender **Go** y **htmx** lo más rápido posible y comenzar a trabajar en ella con el máximo confort. Muchos elementos del proyecto están configurados de forma óptima, listos para producción.
 
-To visualize the workflow, please refer to the diagram:
+Para visualizar el flujo de trabajo, consulte el diagrama:
 
 ```mermaid
 stateDiagram-v2
     direction LR
-        Install: Install CLI
-        Doctor: View diagnostics
-        Create: Create new project
-        Run: Run project
+        Install: Instalar CLI
+        Doctor: Ver diagnostico
+        Create: Crear nuevo proyecto
+        Run: Correr proyecto
         [*] --> Install
         Install --> Create
         Install --> Doctor

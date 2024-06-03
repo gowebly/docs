@@ -1,12 +1,12 @@
-# Installation
+# Instalación
 
-The basics for installing the **Gowebly** CLI on your system are covered in this section.
+Los fundamentos para instalar la CLI de **Gowebly** se cubren en esta sección.
 
 ## Go
 
-[Download][go_download_url] and install **Go**. Version `1.22` (or higher) is required.
+[Descarga][go_download_url] e instala **Go**. Se requiere la versión `1.22` (o superior).
 
-Then, use the [`go install`][go_install_url] command:
+Luego, usa el comando [`go install`][go_install_url]:
 
 ``` bash
 go install github.com/gowebly/gowebly/v2@latest
@@ -14,24 +14,22 @@ go install github.com/gowebly/gowebly/v2@latest
 
 ## Homebrew
 
-GNU/Linux and Apple macOS users available way to install **Gowebly** CLI via [Homebrew][other_brew_url].
-
-Tap a new formula:
+Los usuarios de GNU / Linux y Apple macOS tienen disponible la instalación de la CLI a través de [Homebrew][other_brew_url].
 
 ``` bash
 brew tap gowebly/tap
 ```
 
-Install:
+Luego instala usando:
 
 ``` bash
 brew install gowebly/tap/gowebly
 ```
 
-## Manual mode
+## Modo manual
 
-Download ready-made `exe` files for Windows, `deb` (for Debian, Ubuntu), `rpm` (for CentOS, Fedora), `apk` (for Alpine), or Arch Linux packages from the [Releases][repo_releases_url] page.
+Descargue el `exe` ya compilado para Windows, `deb` (para Debian, Ubuntu), `rpm` (para CentOS, Fedora), `apk` (para Alpine), o el paquete para Arch Linux desde la página [Releases][repo_releases_url].
 
-Install it like you normally would.
+Instálalo como lo haría normalmente.
 
 <!--@include: ../../parts/links.md-->
