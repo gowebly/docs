@@ -148,8 +148,8 @@ const userConfig: UserConfig = {
       themeConfig: {
         nav: [
           { text: 'Inicio', link: '/es/' },
-          { text: 'Para empezar', link: '/es/getting-started' },
-          { text: 'Guía completa del usuario', link: '/es/complete-user-guide' },
+          { text: 'Primeros pasos', link: '/es/getting-started' },
+          { text: 'Guía completa', link: '/es/complete-user-guide' },
           { text: 'FAQ', link: '/es/faq' },
           { text: 'Solución de problemas', link: '/es/troubleshooting' }
         ],
@@ -159,24 +159,24 @@ const userConfig: UserConfig = {
               text: 'Introducción',
               collapsed: false,
               items: [
-                { text: '¿Qué es Gowebly CLI?', link: '/es/getting-started' },
+                { text: '¿Qué es la CLID de Gowebly?', link: '/es/getting-started' },
                 { text: '¿Cómo funciona?', link: '/es/getting-started/how-does-it-work' },
               ]
             },
             {
-              text: 'Pruébese ahora',
+              text: 'Probar ahora',
               collapsed: false,
               items: [
                 { text: 'Guía de inicio rápido', link: '/es/getting-started/quick-start-guide' },
-                { text: 'Biblioteca de ayudantes', link: '/es/getting-started/helpers-library' }
+                { text: 'Helpers', link: '/es/getting-started/helpers-library' }
               ]
             },
             {
               text: 'Desarrollo',
               collapsed: false,
               items: [
-                { text: 'Construir desde la fuente', link: '/es/getting-started/build-from-source' },
-                { text: 'Notas de publicación', link: 'https://github.com/gowebly/gowebly/releases' },
+                { text: 'Build desde source', link: '/es/getting-started/build-from-source' },
+                { text: 'Releases', link: 'https://github.com/gowebly/gowebly/releases' },
                 { text: 'Nuestro equipo', link: '/es/getting-started/our-team' }
               ]
             }
@@ -186,17 +186,17 @@ const userConfig: UserConfig = {
               text: 'Introducción',
               collapsed: false,
               items: [
-                { text: 'Antes de empezar', link: '/es/complete-user-guide' }
+                { text: 'Antes de comenzar', link: '/es/complete-user-guide' }
               ]
             },
             {
-              text: 'Utilización',
+              text: 'Cómo usar',
               collapsed: false,
               items: [
                 { text: 'Instalación', link: '/es/complete-user-guide/installation' },
-                { text: 'Información sobre su sistema', link: '/es/complete-user-guide/info-about-system' },
+                { text: 'Información sobre el sistema', link: '/es/complete-user-guide/info-about-system' },
                 { text: 'Crear un nuevo proyecto', link: '/es/complete-user-guide/create-new-project' },
-                { text: 'Ejecute su proyecto', link: '/es/complete-user-guide/run-your-project' },
+                { text: 'Ejecutar un proyecto', link: '/es/complete-user-guide/run-your-project' },
               ]
             }
           ]
