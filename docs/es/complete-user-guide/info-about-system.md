@@ -1,6 +1,6 @@
-# Info about your system
+# Información sobre el sistema
 
-To view information about your system, execute the `doctor` command:
+Para ver información sobre tu sistema, ejecuta el comando `doctor`:
 
 ::: code-group
 ```bash [CLI]
@@ -12,7 +12,7 @@ go run github.com/gowebly/gowebly@latest doctor
 ```
 :::
 
-And result will be:
+Y el resultado será algo como:
 
 ```
 ✓ Your system information has been collected successfully!

@@ -1,4 +1,4 @@
-# Biblioteca de ayudantes
+# Biblioteca de helpers
 
 La CLI **Gowebly** tiene una librería de [helpers][other_gowebly_helpers_url] para tu código.
 

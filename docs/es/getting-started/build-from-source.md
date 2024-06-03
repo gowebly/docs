@@ -4,30 +4,30 @@ next:
   link: '/es/getting-started/our-team'
 ---
 
-# Build from the source
+# Build desde el código fuente
 
-The basics for building the **Gowebly** project in manual mode are covered in this section.
+Los fundamentos para construir el proyecto **Gowebly** en modo manual están cubiertos en esta sección.
 
-## Clone repository
+## Clonar repositorio
 
-Clone the repository and go to the `./gowebly` folder:
+Clona el repositorio y ve a la carpeta `./gowebly`:
 
 ``` bash
 git clone https://github.com/gowebly/gowebly && cd gowebly
 ```
 
-## Build Go binary
+## Construye el binario Go
 
-Edit everything you need in the source code and run the `go build` command from the project's root folder to build the binary:
+Edita todo lo que necesites en el código fuente y ejecuta el comando `go build` desde la carpeta raíz del proyecto para construir el binario:
 
 ``` bash
-go build -o ./bin/my_gowebly
+go build -o ./bin/mi_gowebly
 ```
 
-And now, you can use your own binary with **Gowebly** CLI:
+Y ahora, puedes usar tu propio binario con **Gowebly** CLI:
 
 ``` bash
-./bin/my_gowebly [COMMAND]
+./bin/my_gowebly [COMANDO]
 ```
 
 <!--@include: ../../parts/links.md-->

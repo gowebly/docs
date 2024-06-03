@@ -4,9 +4,9 @@ next:
   link: '/es/faq'
 ---
 
-# Run your project
+# Ejecutar tu proyecto
 
-To run your project in a development mode, execute the `run` command:
+Para ejecutar tu proyecto en modo de desarrollo, ejecuta el comando `run`:
 
 ::: code-group
 ```bash [CLI]
@@ -18,28 +18,28 @@ go run github.com/gowebly/gowebly@latest run
 ```
 :::
 
-## What CLI does for you?
+## ¿Qué hace la CLI por ti?
 
-Every time you execute the `run` command for a project, the **Gowebly** CLI does the following under the hood:
+Cada vez que ejecutas el comando `run` para un crear un nuevo proyecto, la CLI de **Gowebly** hace lo siguiente:
 
-| Step  | Description                                                                           |
+| Paso  | Descripción                                                                           |
 | :---: | ------------------------------------------------------------------------------------- |
-| **1** | **Start Air tool**                                                                    |
-|       | CLI runs your project with live-reloading mode in a simple `air -c .air.toml` command |
-| **2** | **Live-reloading mode**                                                               |
-|       | Air tool builds frontend part of your project in production mode                      |
-|       | Air tool generates Go functions from `*.templ` templates, if needed                   |
-|       | Air tool builds the backend part of your project                                      |
-|       | Air tool watches for changes in your project files and rebuilds them                  |
+| **1** | **Inicia la herramienta Air**                                                         |
+|       | CLI corre tu proyecto en modo live-reloading con un simple comando `air -c .air.toml` |
+| **2** | **Modo Live-reloading**                                                               |
+|       | Air builds el frontend en modo producción                                             |
+|       | Air genera las funciones de Go desde los templates `*.templ` templates, si se requiere|
+|       | Air builds el backend de tu proyecto                                                  |
+|       | Air queda a la espera de cambios en tu proyecto para hacer rebuilds                   |
 
-To visualize the workflow, please refer to the diagram:
+Para visualizar el flujo de trabajo, consulta el diagrama:
 
 ```mermaid
 stateDiagram-v2
-    Backend: Prepare backend part
-    Frontend: Prepare frontend part
-    Watch: Watch for changes
-    Changes: Changes occurred
+    Backend: Prepara el backend
+    Frontend: Prepara el frontend
+    Watch: Espera cambios
+    Changes: Ocurre un cambio
     direction LR
     Watch --> Changes
     state Changes {

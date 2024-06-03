@@ -1,37 +1,37 @@
-# Quick start guide
+# Guía de inicio rápido
 
-Here's a minimal version of the steps to run the **Gowebly** CLI.
+Aquí tienes una versión rápida de los pasos a seguir para realizar la ejecución de la CLI de **Gowebly**.
 
 <!--@include: ../../parts/es/block_cant-find-answer.md-->
 
-First, [download][go_download_url] and install **Go**. Version `1.22` (or higher) is required.
+En primer lugar, [descargar][go_download_url] e instalar **Go**. Se requiere la versión `1.22` (o superior).
 
-Run the [`go run`][go_run_url] command to create a new project in the current folder:
+Después ejecutar el comando [`go run`][go_run_url] para crear un nuevo proyecto en la carpeta actual:
 
 ``` bash
 go run github.com/gowebly/gowebly/v2@latest create
 ```
 
-::: tip Benefits of the `go run` command
-With `go run`, you can use all features of the **Gowebly** CLI without installation to your system.
+::: tip Ventajas de correr `go run`
+Con `go run`, puedes usar todas las características del CLI de **Gowebly** sin instalarlo en tu sistema.
 :::
 
-That's it! :fire: A web application has been created in the current folder.
+¡Ya está! :fire: Se ha creado una aplicación web en la carpeta actual.
 
-You can check which of the recommended tools are already installed on your system by using the `doctor` utility built into the **Gowebly** CLI:
+Puedes comprobar cuales de las herramientas recomendadas ya están instaladas en tu sistema utilizando el comando `doctor` que viene integrado en la CLI de **Gowebly**:
 
 ``` bash
 go run github.com/gowebly/gowebly/v2@latest doctor
 ```
 
-If some tools are not installed, it is recommended that you install them yourself. Especially **Node.js** (or **Bun**) for building frontend parts of your application.
+Si alguna herramienta no está instalada, se recomienda que la instale tú mismo. Especialmente **Node.js** (o **Bun**) para construir el frontend de tu aplicación.
 
-Now you can start developing your web application.
+Ahora puedes empezar a desarrollar tu aplicación web.
 
-## Use a ready-made packages
+## Usar paquetes ya compilados
 
-Download ready-made `exe` files for Windows, `deb` (for Debian, Ubuntu), `rpm` (for CentOS, Fedora), `apk` (for Alpine), or Arch Linux packages from the [Releases][repo_releases_url] page.
+Descarga el archivo `exe` para Windows, `deb` (para Debian, Ubuntu), `rpm` (para CentOS, Fedora), `apk` (para Alpine), o el paquete para Arch Linux desde la página [Releases][repo_releases_url].
 
-Install it like you normally would.
+Instálalo como lo harías normalmente.
 
 <!--@include: ../../parts/links.md-->

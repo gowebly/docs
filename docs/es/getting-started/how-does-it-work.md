@@ -3,72 +3,72 @@ editLink: false
 lastUpdated: false
 ---
 
-# How does it work?
+# ¿Cómo funciona?
 
-This section will help you understand how **Gowebly** CLI works.
+Esta sección te ayudará a entender cómo funciona la CLI de **Gowebly**.
 
 <!--@include: ../../parts/es/block_want-to-try.md-->
 
-The **Gowebly** CLI is built on top of the [Go][go_url] programming language.
+La CLI de **Gowebly** está construida sobre el lenguaje de programación [Go][go_url].
 
-Therefore, it can run successfully on any supported system and architecture as an executable application. All the templates for the project (both backend and frontend) that it generates as a result of its work are already included in this executable. That is, you do not need any additional files to work with the CLI.
+Por lo tanto, puede ejecutarse en cualquier sistema y arquitectura que soporte dicho lenguaje. Todas las plantillas del proyecto (tanto backend como frontend) ya están incluidas en el ejecutable. Es decir, no necesita ningún archivo adicional para trabajar con la CLI.
 
-## Backend part
+## Backend
 
-The templates for the **backend** part of your project have been thoroughly tested and contain only the features and parameters you need to get started. You can use them as a good start and improve them as your project grows.
+Los templates por el lado del **backend** han sido testeados de manera exhaustiva y contienen solo las características y parámetros necesarios para comenzar. Puedes utilizarlos como un buen comienzo e irlos mejorando a medida que tu proyecto crezca.
 
-At this moment, the CLI supported the following Go web frameworks: [Fiber][backend_fiber_url], [Gin][backend_gin_url], [Echo][backend_echo_url], [Chi][backend_chi_url], [HttpRouter][backend_httprouter_url] and [PocketBase][backend_pocketbase_url]. By default, created project will use the built-in [net/http][backend_net_http_url] package.
+Por el momento, la CLI soporta los siguientes frameworks web de Go: [Fiber][backend_fiber_url], [Gin][backend_gin_url], [Echo][backend_echo_url], [Chi][backend_chi_url], [HttpRouter][backend_httprouter_url] y [PocketBase][backend_pocketbase_url]. Por defecto, el proyecto creado utilizará el paquete [net/http][backend_net_http_url].
 
-### Server layer for htmx
+### Capa del Servidor para htmx
 
-The CLI uses the [htmx-go][backend_angelofallars_go_htmx_url] package, which provides a more convenient API for using the [htmx][frontend_htmx_url] server layer in the backend part of your project.
+La CLI utiliza el paquete [htmx-go][backend_angelofallars_go_htmx_url], que proporciona una API más conveniente para usar la capa de servidor [htmx][frontend_htmx_url] en la parte del backend de tu proyecto.
 
-::: warning Please note
-All web frameworks are supported this package, except **Fiber**. As soon as its developers provide an adapter for integration or write their own wrapper to work with.
+::: warning Tener en cuenta
+Todos los frameworks web soportan este paquete, excepto **Fiber**. Por lo pronto hay que esperar a que los desarrolladores proporcionen soporte o puedes escribir tu propio wrapper para trabajar con él.
 :::
 
 ### Templ
 
-To be more efficient, the CLI supports the [Templ][backend_a_h_templ_url] templating engine. With its help, you can rapidly create UIs for your project without leaving the traditional Go environment.
+Para ser más eficiente, la CLI soporta el motor de plantillas [Templ][backend_a_h_templ_url]. Con su ayuda, puedes crear rápidamente interfaces de usuario para tu proyecto sin salir del entorno tradicional de Go.
 
-All templates are regular Go functions, without having to create additional HTML templates and deal with the built-in Go templating engine (from the `html/template` package).
+Todos los templates son simples funciones de Go, sin necesidad de crear plantillas HTML adicionales y sin lidiar con el motor de plantillas incorporado de Go (del paquete `html/template`).
 
-### Linter for Go code
+### Linter para Go
 
-To make the code cleaner, we give the option to generate the [golangci-lint][backend_golangci_lint_url] configuration file with recommended settings. This is optional, but highly recommended.
+Con el propósito de mantener el código limpio, damos la opción de generar el archivo de configuración de [golangci-lint][backend_golangci_lint_url] con las configuraciones recomendadas. Esto es opcional, pero altamente recomendado.
 
-## Frontend part
+## Frontend 
 
-To create a build for the **frontend** part, the quick and easy [Parcel][frontend_parcel_url] bundler version `2` was chosen. This allowed us to reduce the unnecessarily stressful moment of frontend build to the maximum.
+Para crear una compilación del **frontend**, se eligió el rápido y fácil de usar [Parcel][frontend_parcel_url] bundler versión `2`. Esto nos permitió reducir al máximo el estrés de la construcción del frontend.
 
-No more need to understand configurations, the CLI has already prepared it for you.
+Ya no es necesario entender configuraciones, el CLI ya lo tiene todo preparado.
 
-At this moment, the CLI supported the following CSS frameworks: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url], [Bootstrap][frontend_bootstrap_url], [Bulma][frontend_bulma_url], [daisyUI][frontend_daisyui_url], [Flowbite][frontend_flowbite_url] and [Preline UI][frontend_prelineui_url] components library. By default, created project will use the minimal CSS styles to demonstration.
+En este momento, el CLI soportaba los siguientes frameworks CSS: [Tailwind CSS][frontend_tailwindcss_url], [UnoCSS][frontend_unocss_url], [Bootstrap][frontend_bootstrap_url], [Bulma][frontend_bulma_url], [daisyUI][frontend_daisyui_url], [Flowbite][frontend_flowbite_url] y [Preline UI][frontend_prelineui_url]. Por defecto, el proyecto utilizará los estilos CSS mínimos para la demo.
 
-### Frontend runtime environment
+### Entorno de ejecución del frontend
 
-We keep up with the latest updates to **frontend development tools**, so the CLI supports two JavaScript runtime environments: via the standard [Node.js][frontend_nodejs_url] and the new and extremely fast [Bun][frontend_bun_url] (which is backwards compatible with Node.js).
+Nos mantenemos al día con las últimas actualizaciones de **herramientas de desarrollo frontend**, por lo que el CLI soporta dos entornos de ejecución JavaScript: a través del estándar [Node.js][frontend_nodejs_url] y el nuevo y extremadamente rápido [Bun][frontend_bun_url] (que es compatible con Node.js).
 
-You can choose whichever you like best for your project.
+Puedes elegir el que más te guste para tu proyecto.
 
-### htmx, hyperscript and Alpine.js
+### htmx, hyperscript y Alpine.js
 
-The [htmx][frontend_htmx_url], [hyperscript][frontend_hyperscript_url] and [Alpine.js][frontend_alpinejs_url] reactive libraries are available as regular NPM packages in the `package.json` and will be added to the project "as is" in the `./assets/scripts.js` file.
+Las librerías [htmx][frontend_htmx_url], [hyperscript][frontend_hyperscript_url] y [Alpine.js][frontend_alpinejs_url] están disponibles como paquetes NPM normales en `package.json` y se añadirán al proyecto «tal cual» en el archivo `./assets/scripts.js`.
 
 ### Prettier
 
-Since `v2.0.0`, the **Gowebly** CLI supports the [Prettier][frontend_prettier_url] formatter to format your files.
+Desde la versiòn `v2.0.0`, la CLI de **Gowebly** soporta el formateador [Prettier][frontend_prettier_url] para formatear tus archivos.
 
 ## Live-reload
 
-The **Gowebly** CLI supports the **live-reload** feature by the [Air][backend_air_url] tool. This works the same for both backend Go files and frontend files (JavaScript, CSS and so on).
+La CLI de **Gowebly** soporta la función **live-reload** de la herramienta [Air][backend_air_url]. Esto funciona tanto para los archivos del backend (Go) como para los archivos del frontend (JavaScript, CSS, etc.).
 
-## Deploy
+## Despliegue
 
-To successfully **deploy** your project to a remote server (or in the cloud), the CLI has pre-prepared Docker files (`docker-compose.yml` and `Dockerfile`). They already contain all the settings you need to create an isolated container exactly with your project.
+Para **desplegar** con éxito tu proyecto en un servidor remoto (o en la nube), el CLI tiene archivos Docker listos para ser desplegados (`docker-compose.yml` y `Dockerfile`). Ya contienen todas las configuraciones necesarias para crear un contenedor aislado.
 
-## Conclusion
+## Conclusión
 
-All of this together gives us the confidence to say that you will enjoy working with the **Gowebly** CLI, whatever your experience in code and web development! :wink:
+Todo esto nos da la confianza para decir que disfrutarás trabajando con la CLI de **Gowebly**, ¡sin importar cuál sea tu nivel de experiencia como desarrollador! :wink:
 
 <!--@include: ../../parts/links.md-->

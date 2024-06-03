@@ -6,13 +6,13 @@ prev:
 
 # Troubleshooting
 
-The most common malfunctions that may come up when using the **Gowebly** CLI.
+Los problemas más comunes que pueden surgir al usar la CLI de **Gowebly** se recopilan en esta sección.
 
 <!--@include: ../parts/es/block_cant-find-answer.md-->
 
-## Port X is taken by OS
+## X puerto está ocupado por el sistema
 
-Some operating systems may take up ports that you want to use to develop and deploy your application. You can check if a port is taken by OS by running the command:
+Algunos sistemas operativos pueden ocupar los puertos que deseas usar para desarrollar y desplegar tu aplicación. Puedes verificar si un puerto está ocupado por el sistema ejecutando el siguiente comando:
 
 ::: code-group
 ``` bash [GNU/Linux]
@@ -28,9 +28,9 @@ netstat -aon
 ```
 :::
 
-There are two ways to change it.
+En dado caso, hay dos formas de cambiarlo:
 
-1. Set the port number in the `BACKEND_PORT` environment variable before running:
+1. Establecer el número de puerto en la variable de entorno `BACKEND_PORT` antes de ejecutar:
 
 ::: code-group
 ``` bash [CLI]
@@ -53,7 +53,7 @@ services:
 ```
 :::
 
-2. Edit the port number in the `server.go` file:
+2. Edita el número de puerto en el archivo `server.go`:
 
 ``` go{4}
 // runServer runs a new HTTP server with the loaded environment variables.
@@ -67,6 +67,6 @@ func runServer() error {
 	// ...
 ```
 
-Now, you can open your browser and go to the `http://localhost:9000`.
+Ahora, puedes abrir tu navegador y acceder a `http://localhost:9000`.
 
 <!--@include: ../parts/links.md-->
