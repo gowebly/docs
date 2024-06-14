@@ -23,6 +23,7 @@
 [backend_echo_url]: https://github.com/labstack/echo
 [backend_chi_url]: https://github.com/go-chi/chi
 [backend_httprouter_url]: https://github.com/julienschmidt/httprouter
+[backend_gorilla_mux_url]: https://github.com/gorilla/mux
 [backend_pocketbase_url]: https://github.com/pocketbase/pocketbase
 [backend_a_h_templ_url]: https://github.com/a-h/templ
 [backend_angelofallars_go_htmx_url]: https://github.com/angelofallars/htmx-go

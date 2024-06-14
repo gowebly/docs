@@ -17,7 +17,7 @@ Por lo tanto, puede ejecutarse en cualquier sistema y arquitectura que soporte d
 
 Los templates por el lado del **backend** han sido testeados de manera exhaustiva y contienen solo las características y parámetros necesarios para comenzar. Puedes utilizarlos como un buen comienzo e irlos mejorando a medida que tu proyecto crezca.
 
-Por el momento, la CLI soporta los siguientes frameworks web de Go: [Fiber][backend_fiber_url], [Gin][backend_gin_url], [Echo][backend_echo_url], [Chi][backend_chi_url], [HttpRouter][backend_httprouter_url] y [PocketBase][backend_pocketbase_url]. Por defecto, el proyecto creado utilizará el paquete [net/http][backend_net_http_url].
+Por el momento, la CLI soporta los siguientes frameworks web de Go: [Fiber][backend_fiber_url], [Gin][backend_gin_url], [Echo][backend_echo_url], [Chi][backend_chi_url], [HttpRouter][backend_httprouter_url], [Gorilla/Mux][backend_gorilla_mux_url] y [PocketBase][backend_pocketbase_url]. Por defecto, el proyecto creado utilizará el paquete [net/http][backend_net_http_url].
 
 ### Capa del Servidor para htmx
 
@@ -37,7 +37,7 @@ Todos los templates son simples funciones de Go, sin necesidad de crear plantill
 
 Con el propósito de mantener el código limpio, damos la opción de generar el archivo de configuración de [golangci-lint][backend_golangci_lint_url] con las configuraciones recomendadas. Esto es opcional, pero altamente recomendado.
 
-## Frontend 
+## Frontend
 
 Para crear una compilación del **frontend**, se eligió el rápido y fácil de usar [Parcel][frontend_parcel_url] bundler versión `2`. Esto nos permitió reducir al máximo el estrés de la construcción del frontend.
 

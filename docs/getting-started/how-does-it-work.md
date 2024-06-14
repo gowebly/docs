@@ -17,7 +17,7 @@ Therefore, it can run successfully on any supported system and architecture as a
 
 The templates for the **backend** part of your project have been thoroughly tested and contain only the features and parameters you need to get started. You can use them as a good start and improve them as your project grows.
 
-At this moment, the CLI supported the following Go web frameworks: [Fiber][backend_fiber_url], [Gin][backend_gin_url], [Echo][backend_echo_url], [Chi][backend_chi_url], [HttpRouter][backend_httprouter_url] and [PocketBase][backend_pocketbase_url]. By default, created project will use the built-in [net/http][backend_net_http_url] package.
+At this moment, the CLI supported the following Go web frameworks: [Fiber][backend_fiber_url], [Gin][backend_gin_url], [Echo][backend_echo_url], [Chi][backend_chi_url], [HttpRouter][backend_httprouter_url], [Gorilla/Mux][backend_gorilla_mux_url] and [PocketBase][backend_pocketbase_url]. By default, created project will use the built-in [net/http][backend_net_http_url] package.
 
 ### Server layer for htmx
 
