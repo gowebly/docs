@@ -25,7 +25,7 @@ features:
     details: Powered by htmx & hyperscript and code generation with parallel processing using the Go programming language.
     icon:
       src: /icons/blazing-fast.svg
-  - title: Everyone are welcome
+  - title: Everyone is welcome
     details: Well-documented, multi-language support, for any level of developer's knowledge and technical expertise.
     icon:
       src: /icons/for-everyone.svg
