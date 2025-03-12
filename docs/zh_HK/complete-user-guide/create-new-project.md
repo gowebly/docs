@@ -3,13 +3,15 @@
 To start a new project, execute the `create` command:
 
 ::: code-group
+
 ```bash [CLI]
 gowebly create
 ```
 
 ```bash [Go]
-go run github.com/gowebly/gowebly@latest create
+go run github.com/gowebly/gowebly/v3@latest create
 ```
+
 :::
 
 And result will be:
@@ -30,6 +32,7 @@ Therefore, you are **free to create** any project structure you wish.
 :::
 
 ::: code-group
+
 ```bash{18,19} [Using html/template]
 .
 ├── assets
@@ -101,6 +104,7 @@ Therefore, you are **free to create** any project structure you wish.
 ├── prettier.config.js
 └── server.go
 ```
+
 :::
 
 ::: danger Auto-generated files by Templ

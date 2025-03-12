@@ -3,13 +3,15 @@
 Para ver información sobre tu sistema, ejecuta el comando `doctor`:
 
 ::: code-group
+
 ```bash [CLI]
 gowebly doctor
 ```
 
 ```bash [Go]
-go run github.com/gowebly/gowebly@latest doctor
+go run github.com/gowebly/gowebly/v3@latest doctor
 ```
+
 :::
 
 Y el resultado será algo como:
@@ -20,11 +22,11 @@ Y el resultado será algo como:
 │
 │ Copy this information to paste into an issue ↘
 │
-│ Gowebly CLI: v2.3.3 (build with go1.22.1 on darwin/arm64)
+│ Gowebly CLI: v3.0.0 (build with go1.24.1 on darwin/arm64)
 │
-│ Go: 1.22.1 darwin/arm64
-│ Node.js version: 21.7.1 (npm 10.5.0)
-│ Bun version: 1.0.35
+│ Go: 1.24.1 darwin/arm64
+│ Node.js version: 20.18.3 (npm 10.8.2)
+│ Bun version: 1.2.4
 │
 │ Is Air tool installed? true
 │ Is Templ package installed? true

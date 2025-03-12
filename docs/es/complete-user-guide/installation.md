@@ -4,25 +4,25 @@ Los fundamentos para instalar la CLI de **Gowebly** se cubren en esta sección.
 
 ## Go
 
-[Descarga][go_download_url] e instala **Go**. Se requiere la versión `1.22` (o superior).
+[Descarga][go_download_url] e instala **Go**. Se requiere la versión `1.24.0` (o superior).
 
 Luego, usa el comando [`go install`][go_install_url]:
 
-``` bash
-go install github.com/gowebly/gowebly/v2@latest
+```bash
+go install github.com/gowebly/gowebly/v3@latest
 ```
 
 ## Homebrew
 
 Los usuarios de GNU / Linux y Apple macOS tienen disponible la instalación de la CLI a través de [Homebrew][other_brew_url].
 
-``` bash
+```bash
 brew tap gowebly/tap
 ```
 
 Luego instala usando:
 
-``` bash
+```bash
 brew install gowebly/tap/gowebly
 ```
 

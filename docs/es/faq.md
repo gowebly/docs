@@ -26,7 +26,7 @@ gowebly doctor
 ```
 
 ```bash [Go]
-go run github.com/gowebly/gowebly@latest doctor
+go run github.com/gowebly/gowebly/v3@latest doctor
 ```
 
 :::

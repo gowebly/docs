@@ -1,7 +1,7 @@
 ---
 next:
-  text: 'FAQ'
-  link: '/ru/faq'
+  text: "FAQ"
+  link: "/ru/faq"
 ---
 
 # Run your project
@@ -9,13 +9,15 @@ next:
 To run your project in a development mode, execute the `run` command:
 
 ::: code-group
+
 ```bash [CLI]
 gowebly run
 ```
 
 ```bash [Go]
-go run github.com/gowebly/gowebly@latest run
+go run github.com/gowebly/gowebly/v3@latest run
 ```
+
 :::
 
 ## What CLI does for you?

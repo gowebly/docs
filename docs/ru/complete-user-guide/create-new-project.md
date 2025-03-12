@@ -1,22 +1,24 @@
-# Create a new project
+# Создание нового проекта
 
-To start a new project, execute the `create` command:
+Для начала создания нового проекта, выполните команду `create`:
 
 ::: code-group
+
 ```bash [CLI]
 gowebly create
 ```
 
 ```bash [Go]
-go run github.com/gowebly/gowebly@latest create
+go run github.com/gowebly/gowebly/v3@latest create
 ```
+
 :::
 
-And result will be:
+И результат будет выглядеть так:
 
 <img width="100%" alt="gowebly create" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly_create.gif"/>
 
-Typically, the created project contains the following files and folders:
+Обычно, структура нового проекта выглядит так:
 
 - The templates are located in the `./templates` folder.
 - The main CSS file `styles.scss` is located in the `./assets` folder.
@@ -30,6 +32,7 @@ Therefore, you are **free to create** any project structure you wish.
 :::
 
 ::: code-group
+
 ```bash{18,19} [Using html/template]
 .
 ├── assets
@@ -101,6 +104,7 @@ Therefore, you are **free to create** any project structure you wish.
 ├── prettier.config.js
 └── server.go
 ```
+
 :::
 
 ::: danger Auto-generated files by Templ

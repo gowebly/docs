@@ -4,12 +4,12 @@ Aquí tienes una versión rápida de los pasos a seguir para realizar la ejecuci
 
 <!--@include: ../../parts/es/block_cant-find-answer.md-->
 
-En primer lugar, [descargar][go_download_url] e instalar **Go**. Se requiere la versión `1.22` (o superior).
+En primer lugar, [descargar][go_download_url] e instalar **Go**. Se requiere la versión `1.24.0` (o superior).
 
 Después ejecutar el comando [`go run`][go_run_url] para crear un nuevo proyecto en la carpeta actual:
 
-``` bash
-go run github.com/gowebly/gowebly/v2@latest create
+```bash
+go run github.com/gowebly/gowebly/v3@latest create
 ```
 
 ::: tip Ventajas de correr `go run`
@@ -20,8 +20,8 @@ Con `go run`, puedes usar todas las características del CLI de **Gowebly** sin 
 
 Puedes comprobar cuales de las herramientas recomendadas ya están instaladas en tu sistema utilizando el comando `doctor` que viene integrado en la CLI de **Gowebly**:
 
-``` bash
-go run github.com/gowebly/gowebly/v2@latest doctor
+```bash
+go run github.com/gowebly/gowebly/v3@latest doctor
 ```
 
 Si alguna herramienta no está instalada, se recomienda que la instale tú mismo. Especialmente **Node.js** (o **Bun**) para construir el frontend de tu aplicación.
